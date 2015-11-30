@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFe7e7e7</color>
+    <color name="white_background">#CCe7e7e7</color>
+
+
+    <color name="blue">#FF0152bf</color>
+    <color name="blue_active">#FF4282d9</color>
+    <color name="blue_background">#CC0152bf</color>
+
+
+    <color name="yellow">#FFdeb02f</color>
+    <color name="yellow_active">#FFdfc064</color>
+    <color name="yellow_background">#CCdfc064</color>
+
+
+    <color name="green">#FF3CDA65</color>
+    <color name="green_background">#CC3CDA65</color>
+
+
+    <color name="red">#FFC62C41</color>
+    <color name="red_background">#CCC62C41</color>
+
+    <color name="purple">#FF8643B7</color>
+    <color name="purple_background">#CC8643B7</color>
+
+
+
+    <color name="brown">#FFA88444</color>
+    <color name="brown_background">#CCA88444</color>
+
+
+    <color name="aqua">#FF339D7C</color>
+    <color name="aqua_background">#CC339D7C</color>
+
+
+    <color name="pink">#FFEE668F</color>
+    <color name="pink_background">#CCEE668F</color>
+
+    <color name="black">#000</color>
+
+    <color name="vowelsColor">@color/purple</color>
+</resources>

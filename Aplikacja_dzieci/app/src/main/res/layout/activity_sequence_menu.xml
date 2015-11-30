@@ -1,0 +1,269 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.marcinwroblewski.aplikacja_dzieci.Sequence.SequenceMenu"
+    android:background="@drawable/sequence_bg">
+    <!-- Fake ActionBar :3 -->
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/white_background"
+        >
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_bar_padding"
+
+            android:clickable="true"
+            android:onClick="sendBack"/>
+
+        <TextView
+            android:id="@+id/action_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/action_bar_padding"
+
+            android:text="Samogłoski"
+            android:textSize="@dimen/action_bar_text_size"
+            android:textColor="@color/blue"/>
+
+        <ImageView
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Przycisk ustawień"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/action_bar_padding"
+            android:src="@drawable/settings"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_bar_padding"
+
+            android:clickable="true"
+            android:onClick="sendToSettings"/>
+
+        <ImageView
+            android:id="@+id/print_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Przycisk wydruku"
+            android:layout_alignRight="@id/settings_button"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/print"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_bar_padding"
+
+            />
+
+    </RelativeLayout>
+    <!-- Fake ActionBar :| -->
+
+    <RelativeLayout
+        android:id="@+id/app_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:padding="@dimen/app_container_padding">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                android:id="@+id/two_elements_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                    <TextView
+                        android:id="@+id/two_elements_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_controls_heigth"
+
+                        android:text="Dwuelementowe"
+                        android:gravity="center"
+                        android:textSize="@dimen/defalut_text_size"
+                        android:background="@color/blue_background"
+                        android:textColor="@color/white"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/first_opt_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@id/two_elements_label"
+                        android:gravity="center"
+
+                        android:clickable="true"
+                        android:onClick="goToSequence">
+                        <ImageView
+                            android:id="@+id/sun_img"
+
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sun"
+                            android:background="@color/white_background"
+                            android:tag="sun"
+                            />
+
+                        <ImageView
+                            android:id="@+id/cloud_img"
+
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/cloud"
+                            android:background="@color/white_background"
+                            android:layout_toRightOf="@id/sun_img"
+                            android:tag="cloud"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/second_opt_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@id/first_opt_2"
+                        android:gravity="center"
+
+                        android:clickable="true"
+                        android:onClick="goToSequence">
+
+                        <ImageView
+                            android:id="@+id/car_img"
+
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/car"
+                            android:background="@color/white_background"
+                            android:tag="car"/>
+
+                        <ImageView
+                            android:id="@+id/plane_img"
+
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/plane"
+                            android:background="@color/white_background"
+                            android:layout_toRightOf="@id/car_img"
+                            android:tag="plane"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/three_elements_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:id="@+id/three_elements_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_controls_heigth"
+
+                        android:text="Trójelementowe"
+                        android:gravity="center"
+                        android:textSize="@dimen/defalut_text_size"
+                        android:background="@color/blue_background"
+                        android:textColor="@color/white"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/first_opt_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@id/three_elements_label"
+                        android:gravity="center"
+
+                        android:clickable="true"
+                        android:onClick="goToSequence">
+
+                        <ImageView
+                            android:id="@+id/car_img2"
+
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/car"
+                            android:background="@color/white_background"
+                            android:tag="car"/>
+
+                        <ImageView
+                            android:id="@+id/plane_img2"
+
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/plane"
+                            android:background="@color/white_background"
+                            android:layout_toRightOf="@id/car_img2"
+                            android:tag="plane"/>
+
+                        <ImageView
+                            android:id="@+id/ship_img2"
+
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ship"
+                            android:background="@color/white_background"
+                            android:layout_toRightOf="@id/plane_img2"
+                            android:tag="ship"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/second_opt_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@id/first_opt_3"
+                        android:gravity="center"
+
+                        android:clickable="true"
+                        android:onClick="goToSequence">
+
+                        <ImageView
+                            android:id="@+id/sun_img2"
+
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sun"
+                            android:background="@color/white_background"
+                            android:tag="sun"/>
+
+                        <ImageView
+                            android:id="@+id/cloud_img2"
+
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/cloud"
+                            android:background="@color/white_background"
+                            android:layout_toRightOf="@id/sun_img2"
+                            android:tag="cloud"/>
+
+                        <ImageView
+                            android:id="@+id/goat_img2"
+
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/goat"
+                            android:background="@color/white_background"
+                            android:layout_toRightOf="@id/cloud_img2"
+                            android:tag="goat"/>
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

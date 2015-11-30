@@ -1,0 +1,244 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.marcinwroblewski.aplikacja_dzieci.Settings.Settings"
+    android:background="@drawable/background_settings"
+    android:descendantFocusability="beforeDescendants"
+
+    >
+
+
+
+    <!-- Fake ActionBar :3 -->
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/white_background"
+        >
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_bar_padding"
+
+            android:clickable="true"
+            android:onClick="sendBack"
+            android:contentDescription="@string/back_button_description" />
+
+        <TextView
+            android:id="@+id/action_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/action_bar_padding"
+
+            android:text="@string/title_activity_settings"
+            android:textSize="@dimen/action_bar_text_size"
+            android:textColor="@color/blue"/>
+
+
+    </RelativeLayout>
+    <!-- Fake ActionBar :| -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/action_bar_height"
+        >
+
+
+    <RelativeLayout
+        android:id="@+id/app_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:padding="@dimen/activity_horizontal_margin"
+
+        >
+
+        <EditText
+            android:id="@+id/child_name_holder"
+            android:layout_width="@dimen/default_controls_width"
+            android:layout_height="@dimen/default_controls_heigth"
+            android:paddingLeft="@dimen/edittext_padding"
+            android:background="@color/white_background"
+
+            android:maxLines="1"
+            android:singleLine="true"
+            android:hint="Imię dziecka"
+            android:textColor="@color/blue_active"
+            android:textColorHint="@color/blue"/>
+
+
+        <TextView
+            android:id="@+id/reader_label"
+            android:layout_width="@dimen/default_controls_width"
+            android:layout_height="@dimen/default_controls_heigth"
+            android:padding="@dimen/textview_background_padding"
+            android:layout_marginTop="@dimen/default_controls_heigth"
+            android:layout_below="@id/child_name_holder"
+            android:background="@color/blue_background"
+
+            android:text="@string/reader_choose"
+            android:textColor="@color/white"
+            android:textSize="@dimen/defalut_text_size"
+            android:gravity="center"
+        />
+
+                <TextView
+                    android:id="@+id/reader_men"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/default_controls_heigth"
+                    android:padding="@dimen/textview_background_padding"
+                    android:layout_below="@id/reader_label"
+                    android:background="@color/blue_background"
+
+                    android:text="@string/reader_men"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/defalut_text_size"
+                    android:gravity="center"
+
+                    android:clickable="true"
+                    android:onClick="setReaderChoice"
+                    />
+
+                <TextView
+                    android:id="@+id/reader_women"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/default_controls_heigth"
+                    android:padding="@dimen/textview_background_padding"
+                    android:layout_below="@id/reader_label"
+                    android:layout_toRightOf="@id/reader_men"
+
+
+                    android:background="@color/white_background"
+
+                    android:text="@string/reader_women"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/defalut_text_size"
+                    android:gravity="center"
+
+                    android:clickable="true"
+                    android:onClick="setReaderChoice"
+                    />
+
+
+
+        <TextView
+            android:id="@+id/reward_label"
+            android:layout_width="@dimen/default_controls_width"
+            android:layout_height="@dimen/default_controls_heigth"
+            android:padding="@dimen/textview_background_padding"
+            android:layout_below="@id/reader_men"
+            android:layout_marginTop="@dimen/default_controls_heigth"
+            android:background="@color/blue_background"
+            android:gravity="center"
+            
+            android:text="@string/reward_choice"
+            android:textSize="@dimen/defalut_text_size"
+            android:textColor="@color/white"
+            />
+
+
+            <ScrollView
+                android:id="@+id/scroll_rewards"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reward_label">
+
+                <RelativeLayout
+                    android:id="@+id/rewards_container"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/reward01"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentLeft="true"
+
+                        android:background="@color/blue_background"
+                        android:src="@drawable/ship"
+
+                        android:clickable="true"
+                        android:onClick="setReward"/>
+
+                    <ImageView
+                        android:id="@+id/reward02"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_toRightOf="@id/reward01"
+
+                        android:background="@color/white_background"
+                        android:src="@drawable/plane"
+
+                        android:clickable="true"
+                        android:onClick="setReward"/>
+
+                    <ImageView
+                        android:id="@+id/reward03"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_toRightOf="@id/reward02"
+
+
+                        android:background="@color/white_background"
+                        android:src="@drawable/train"
+
+                        android:clickable="true"
+                        android:onClick="setReward"/>
+
+                </RelativeLayout>
+            </ScrollView>
+        <RelativeLayout
+            android:id="@+id/child_photo_holder"
+            android:layout_width="@dimen/default_controls_width"
+            android:layout_height="@dimen/default_controls_width"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white_background"
+
+            android:clickable="true"
+            android:onClick="imageMenu">
+
+            <ImageView
+                android:id="@+id/child_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+                android:src="@drawable/add"
+
+
+                />
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/scroll_rewards"
+            android:padding="@dimen/defalut_text_size"
+            android:gravity="center"
+
+            android:text="@string/save"
+            android:textSize="@dimen/defalut_text_size"
+            android:textColor="@color/white"
+            android:background="@color/blue_background"
+            />
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

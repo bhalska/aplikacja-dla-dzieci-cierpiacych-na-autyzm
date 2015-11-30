@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Aplikacja dla dzieci</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="title_activity_vovel_draw">Rysowanie samogłosek</string>
+    <string name="title_activity_settings">Ustawienia</string>
+    <string name="reader_choose">Wybierz głos lektora</string>
+    <string name="reader_men">męski</string>
+    <string name="reader_women">damski</string>
+    <string name="title_activity_vowels_learn">Nauka czytania samogłosek</string>
+    <string name="title_activity_games_menu">Wybierz grę</string>
+    <string name="settings_button_description">Przycisk ustawień</string>
+    <string name="back_button_description">Przycisk powrotu</string>
+    <string name="print_button_description">Przycisk wydruku</string>
+    <string name="speech">Mowa bierna</string>
+    <string name="graf_motility">Grafomotoryka</string>
+    <string name="sequence">Układanie sekwencji</string>
+    <string name="serial">Układanie szeregow</string>
+    <string name="reward_choice">Wybierz nagrodę</string>
+    <string name="save">Zapisz</string>
+    <string name="title_activity_print">Drukuj</string>
+    <string name="title_activity_speech_games">Mowa bierna</string>
+    <string name="title_activity_vowels_game">Samogłoski</string>
+    <string name="title_activity_reward">Ekran nagrody</string>
+    <string name="vowel_learn_description">Nauka samogłosek</string>
+    <string name="vowel_test_description">Gra w samogłoski</string>
+    <string name="onomatopoeic_learn_description">Nauka wyrazów dźwiękonaśladowczych</string>
+    <string name="onomatopoeic_game_description">Gra z wyrazami dźwiękonaśladowczymi</string>
+    <string name="title_activity_onomatopoeic_learn">Nauka wyrazów dźwiękonaśladowczych</string>
+    <string name="title_activity_onomatopoeic_game">Grafomotoryka</string>
+
+
+    <!-- Dźwiękonaśladowcze -->
+
+        <!--Zwierzęta-->
+
+            <string name="onomatopoeic_goat">Me Mee</string>
+            <string name="onomatopoeic_sheep">Be Bee</string>
+            <string name="onomatopoeic_cat">Miau Miau</string>
+            <string name="onomatopoeic_dog">Hau Hau</string>
+            <string name="onomatopoeic_cow">Mu Muu</string>
+            <string name="onomatopoeic_snake">Sss ss</string>
+            <string name="onomatopoeic_chicken">Ko ko ko</string>
+
+        <!--Zwierzęta-->
+
+        <!--
+            TODO: inne dźwięki - pociąg, auto, zegar, pukanie do drzwi, kropla wody (kran),
+                    telefon...
+        -->
+
+    <!-- Dźwiękonaśladowcze -->
+
+        <string name="animal_goat">Kozioł</string>
+        <string name="animal_sheep">Owca</string>
+        <string name="animal_cat">Kot</string>
+        <string name="animal_dog">Pies</string>
+        <string name="animal_cow">Krowa</string>
+        <string name="animal_snake">Wąż</string>
+        <string name="animal_chicken">Kurczak</string>
+
+    <!-- Zwierzęta gospodarcze
+
+
+
+    -->
+
+    <!-- table elements -->
+
+    <string name="fork">widelec</string>
+    <string name="knife">nóż</string>
+    <string name="spoon">łyżka</string>
+    <string name="plate">talerz</string>
+    <string name="glass_with_juice">szklanka z sokiem</string>
+
+
+    <!-- Kolory -->
+    <string name="purple">Fioletowy</string>
+    <string name="pink">Różowy</string>
+    <string name="orange">Pomarańczowy</string>
+    <string name="green">Zielony</string>
+    <string name="blue">Niebieski</string>
+    <string name="yellow">Żółty</string>
+
+
+    <!-- Meble -->
+    <string name="bed">Łóżko</string>
+    <string name="chair">Krzesło</string>
+    <string name="commode">Komoda</string>
+    <string name="lamp">Lampa</string>
+    <string name="table">Stół</string>
+    <string name="wardrobe">Szafa</string>
+
+
+    <!-- Ciuchy -->
+    <string name="scarf">Szalik</string>
+    <string name="cap">Czapka</string>
+    <string name="shirt">Koszula</string>
+    <string name="panties">Majtki</string>
+    <string name="coat">Płaszcz</string>
+    <string name="glow">Rękawiczka</string>
+    <string name="dress">Spódniczka</string>
+    <string name="pants">Spodnie</string>
+
+    <!-- Zabawki -->
+    <string name="autko">Autko</string>
+    <string name="klaun">Klaun</string>
+    <string name="kolejka">Kolejka</string>
+    <string name="lalka">Lalka</string>
+    <string name="mis">Miś</string>
+    <string name="pilka">Piłka</string>
+    <string name="samolot">Samolot</string>
+    <string name="wozek">Wózek</string>
+
+
+    <string name="title_activity_motility">Grafomotoryka</string>
+    <string name="title_activity_sequence_learn">Nauka układania sekwencji</string>
+    <string name="title_activity_start">Ekran ładowania</string>
+    <string name="title_activity_sequence_menu">Menu nauczania układania sekwencji</string>
+    <string name="title_activity_motility_menu">Menu grafomotoryki</string>
+    <string name="title_activity_serial_menu">Menu nauczania układania szeregów</string>
+    <string name="title_activity_serial_learn">Nauka układania szeregów</string>
+    <string name="title_activity_economic">Zwięrzęta gospodarcze</string>
+    <string name="title_activity_table_learn">TableLearn</string>
+
+    <string name="title_activity_table_game">TableGame</string>
+    <string name="title_activity_colors_learn">ColorsLearn</string>
+    <string name="title_activity_colors_game">ColorsGame</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_room_game">RoomGame</string>
+    <string name="title_activity_room_learn">RoomLearn</string>
+    <string name="title_activity_clothes_learn">ClothesLearn</string>
+    <string name="title_activity_clothes_game">ClothesGame</string>
+    <string name="title_activity_toys_learn">ToysLearn</string>
+    <string name="title_activity_toys_game">ToysGame</string>
+
+</resources>

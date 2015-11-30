@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.marcinwroblewski.aplikacja_dzieci.Sequence.SequenceMenu"
+    android:background="@drawable/serial_bg">
+    <!-- Fake ActionBar :3 -->
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/white_background"
+        >
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_bar_padding"
+
+            android:clickable="true"
+            android:onClick="sendBack"/>
+
+        <TextView
+            android:id="@+id/action_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/action_bar_padding"
+
+            android:text="Samogłoski"
+            android:textSize="@dimen/action_bar_text_size"
+            android:textColor="@color/blue"/>
+
+        <ImageView
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Przycisk ustawień"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/action_bar_padding"
+            android:src="@drawable/settings"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_bar_padding"
+
+            android:clickable="true"
+            android:onClick="sendToSettings"/>
+
+        <ImageView
+            android:id="@+id/print_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Przycisk wydruku"
+            android:layout_alignRight="@id/settings_button"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/print"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_bar_padding"
+
+            />
+
+    </RelativeLayout>
+    <!-- Fake ActionBar :| -->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:padding="@dimen/app_container_padding">
+    <RelativeLayout
+        android:id="@+id/app_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:padding="@dimen/app_container_padding">
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/first_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/plane"
+                        android:background="@color/white_background"
+                        android:tag="plane"
+
+                        android:clickable="true"
+                        android:onClick="goToSerial"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/ship"
+                        android:background="@color/blue_background"
+                        android:tag="ship"
+
+                        android:clickable="true"
+                        android:onClick="goToSerial"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/train"
+                        android:background="@color/white_background"
+                        android:tag="train"
+
+                        android:clickable="true"
+                        android:onClick="goToSerial"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:layout_below="@id/first_line"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/goat"
+                        android:background="@color/blue_background"
+                        android:tag="goat"
+
+                        android:clickable="true"
+                        android:onClick="goToSerial"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/cat"
+                        android:background="@color/white_background"
+                        android:tag="cat"
+
+                        android:clickable="true"
+                        android:onClick="goToSerial"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/cow"
+                        android:background="@color/blue_background"
+                        android:tag="cow"
+
+                        android:clickable="true"
+                        android:onClick="goToSerial"/>
+
+                </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
