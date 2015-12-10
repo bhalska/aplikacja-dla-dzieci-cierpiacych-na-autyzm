@@ -17,7 +17,7 @@ Ekran wyświetlany jest po zakończeniu ćwiczenia. Wyświetla opis postępów p
 
 # Zrzuty ekranu:
 
-![alt tag](https://github.com/bhalska/aplikacja-dla-dzieci-cierpiacych-na-autyzm/blob/master/screenshots/Screenshot_2015-12-10-17-42-50.jpeg?raw=true)
+![alt tag](https://github.com/bhalska/aplikacja-dla-dzieci-cierpiacych-na-autyzm/blob/master/screenshots/Screenshot_2015-12-10-17-43-05.jpeg?raw=true)
 
 
 ![alt tag](https://github.com/bhalska/aplikacja-dla-dzieci-cierpiacych-na-autyzm/blob/master/screenshots/Screenshot_2015-12-10-17-43-32.jpeg?raw=true)
