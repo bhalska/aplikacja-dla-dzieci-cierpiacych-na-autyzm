@@ -57,8 +57,7 @@ public class SequenceLearn extends Activity {
 
         setContentView(R.layout.activity_sequence_learn);
 
-        ActionBar bar = getActionBar();
-        bar.hide();
+        getActionBar().hide();
 
         utils = new Utilities();
 
@@ -451,8 +450,14 @@ public class SequenceLearn extends Activity {
             counter++;
         }
 
-        isSent = false;
+        setMovementAndCollisions(image1, imagesIDs[0]);
+        setMovementAndCollisions(image2, imagesIDs[1]);
+        setMovementAndCollisions(image3, imagesIDs[2]);
+        setMovementAndCollisions(image4, imagesIDs[3]);
+        setMovementAndCollisions(image5, imagesIDs[4]);
+        setMovementAndCollisions(image6, imagesIDs[5]);
 
+        isSent = false;
     }
 
 
