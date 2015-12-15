@@ -31,3 +31,7 @@ Ekran wyświetlany jest po zakończeniu ćwiczenia. Wyświetla opis postępów p
 
 
 ![alt tag](https://github.com/bhalska/aplikacja-dla-dzieci-cierpiacych-na-autyzm/blob/master/screenshots/Screenshot_2015-12-10-17-43-50.jpeg?raw=true)
+
+Programista Android: Marcin Wróblewski <br />
+Grafiki: Arkadiusz Chodór <br />
+Promotorzy: Katarzyna Sobala-Kwasniewska i Barbara Halska <br />
