@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Aplikacja dla dzieci</string>
+    <string name="app_name">Sówka Beta</string>
     <string name="action_settings">Ustawienia</string>
     <string name="title_activity_vovel_draw">Rysowanie samogłosek</string>
     <string name="title_activity_settings">Ustawienia</string>

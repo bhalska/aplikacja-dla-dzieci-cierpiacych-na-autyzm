@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -42,7 +43,6 @@ public class Settings extends Activity {
     private static final int TAKE_PICTURE = 2;
 
     private int reward;
-
 
     private EditText childName;
     private TextView readerMen, readerWomen;
@@ -76,17 +76,15 @@ public class Settings extends Activity {
         settings = getApplicationContext().getSharedPreferences("pl.marcinwroblewski.aplikacja_dzieci", getApplicationContext().MODE_PRIVATE);
         settingsEditor = settings.edit();
 
-        settingsEditor.putString("external_directory",  Environment.getExternalStorageDirectory().toString() +  "/" + getResources().getString(R.string.app_name) + "/");
-
+        settingsEditor.putString("external_directory",  getApplicationContext().getFilesDir().getAbsolutePath() + "/");
         imageName = "child_photo.png";
+
+        Log.d("Settings", "Avatar directory: " + settings.getString("external_directory", "") + imageName);
 
         childName = (EditText)findViewById(R.id.child_name_holder);
 
 
         childName.setOnKeyListener(new View.OnKeyListener() {
-
-            String newLine = System.getProperty("line.separator");
-
 
             @Override
             public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
@@ -118,10 +116,6 @@ public class Settings extends Activity {
 
                     switch(event){
                         case MotionEvent.ACTION_DOWN:
-                            saveSettings();
-                            break;
-
-                        case MotionEvent.ACTION_UP:
                             saveSettings();
                             break;
                     }
@@ -344,7 +338,7 @@ public class Settings extends Activity {
 
 
     private void getImageFromExternal() {
-        if((new File(settings.getString("external_directory", "") + imageName).exists()) && (null != new File(settings.getString("external_directory", "") + imageName))) {
+        if((new File(settings.getString("external_directory", "") + imageName).exists())) {
             Bitmap bitmap = BitmapFactory.decodeFile(settings.getString("external_directory", "") + imageName, options);
             setChildImage(bitmap);
         }else if(settings.getString("external_directory", "").equals("")){

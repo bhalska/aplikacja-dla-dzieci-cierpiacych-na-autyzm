@@ -181,7 +181,7 @@ public class SerialLearn extends Activity {
 
                             if(seqElements[i] != null) {
                                 params2.setMargins(
-                                        (seqElements[i].getWidth() * (random.nextInt(2)+1)) * i,
+                                        (seqElements[i].getWidth() * (random.nextInt(5)+1)),
                                         (seqElements[i].getHeight() * (random.nextInt(2)+1)), 0, 0);
                                 seqElements[i].setLayoutParams(params2);
                                 seqElements[i].setImageDrawable(element);
@@ -415,6 +415,11 @@ public class SerialLearn extends Activity {
             seqElement.setVisibility(View.VISIBLE);
             counter++;
         }
+
+        setMovementAndCollisions(image1, imagesIDs[0]);
+        setMovementAndCollisions(image2, imagesIDs[1]);
+        setMovementAndCollisions(image3, imagesIDs[2]);
+        setMovementAndCollisions(image4, imagesIDs[3]);
 
         isSent = false;
 

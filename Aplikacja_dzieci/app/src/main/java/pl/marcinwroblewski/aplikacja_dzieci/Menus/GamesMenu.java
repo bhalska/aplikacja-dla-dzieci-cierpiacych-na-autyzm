@@ -66,7 +66,6 @@ public class GamesMenu extends Activity {
                 startActivity(new Intent(getApplicationContext(), SerialMenu.class));
                 break;
 
-            
 
             case R.id.settings_button:
                 startActivity(new Intent(getApplicationContext(), Settings.class));
