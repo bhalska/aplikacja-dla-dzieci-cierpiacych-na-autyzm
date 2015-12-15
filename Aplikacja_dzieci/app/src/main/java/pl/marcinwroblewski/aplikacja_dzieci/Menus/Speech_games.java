@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
-import pl.marcinwroblewski.aplikacja_dzieci.Onomatopoeic.AnimalsLearn.EconomicAnimals;
+import pl.marcinwroblewski.aplikacja_dzieci.Onomatopoeic.AnimalsLearn.EconomicAnimalsLearn;
 import pl.marcinwroblewski.aplikacja_dzieci.Onomatopoeic.OnomatopoeicGame;
 import pl.marcinwroblewski.aplikacja_dzieci.Onomatopoeic.OnomatopoeicLearn;
 import pl.marcinwroblewski.aplikacja_dzieci.R;
@@ -59,7 +58,7 @@ public class Speech_games extends Activity {
 
     public void goTo(View view) {
 
-        Log.d(getPackageName(), "goTo wywo�ane w SpeechGames");
+        Log.d(getPackageName(), "goTo wywołane w SpeechGames");
 
 
         switch (view.getId()) {
@@ -80,7 +79,11 @@ public class Speech_games extends Activity {
                 break;
 
             case R.id.economic_animals_learn:
-                startActivity(new Intent(getApplicationContext(), EconomicAnimals.class));
+                startActivity(new Intent(getApplicationContext(), EconomicAnimalsLearn.class));
+                break;
+
+            case R.id.economic_animals_game:
+                startActivity(new Intent(getApplicationContext(), EconomicAnimalsLearn.class));
                 break;
 
             case R.id.table_elements_learn:
@@ -124,7 +127,7 @@ public class Speech_games extends Activity {
                 break;
 
             default:
-                Log.w(getPackageName(), "Nie obsłużony przycisk w SpeechGames");
+                Log.w(getPackageName(), "Nieobsłużony przycisk w SpeechGames");
         }
     }
 

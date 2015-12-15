@@ -18,9 +18,9 @@
     <dimen name="onomatopoeic_text_size">60sp</dimen>
     <dimen name="sequence_element_width">150dp</dimen>
 
-    <dimen name="defalut_text_size">25dp</dimen>
+    <dimen name="defalut_text_size">25sp</dimen>
     <dimen name="action_bar_text_size">25dp</dimen>
-    <dimen name="vowel_inApp">350dp</dimen>
+    <dimen name="vowel_inApp">175dp</dimen>
     <dimen name="default_text_size_print">200dp</dimen>
     <dimen name="image_default_padding">15dp</dimen>
 

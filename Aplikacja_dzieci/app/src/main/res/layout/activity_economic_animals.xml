@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/onomatopoeic_bg"
-    tools:context="pl.marcinwroblewski.aplikacja_dzieci.Onomatopoeic.AnimalsLearn.EconomicAnimals">
+    tools:context=".Onomatopoeic.AnimalsLearn.EconomicAnimalsLearn">
 
     <!-- Fake ActionBar :3 -->
     <RelativeLayout

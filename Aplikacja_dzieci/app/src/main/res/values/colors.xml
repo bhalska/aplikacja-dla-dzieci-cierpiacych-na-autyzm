@@ -37,6 +37,9 @@
     <color name="pink">#FFEE668F</color>
     <color name="pink_background">#CCEE668F</color>
 
+    <color name="unactive">#4A4A4A</color>
+    <color name="unactive_bg">#CC4A4A4A</color>
+
     <color name="black">#000</color>
 
     <color name="vowelsColor">@color/purple</color>
