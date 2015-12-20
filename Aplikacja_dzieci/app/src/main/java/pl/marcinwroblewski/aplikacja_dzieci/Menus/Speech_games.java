@@ -16,6 +16,8 @@ import pl.marcinwroblewski.aplikacja_dzieci.Speech.ClothesGame;
 import pl.marcinwroblewski.aplikacja_dzieci.Speech.ClothesLearn;
 import pl.marcinwroblewski.aplikacja_dzieci.Speech.ColorsGame;
 import pl.marcinwroblewski.aplikacja_dzieci.Speech.ColorsLearn;
+import pl.marcinwroblewski.aplikacja_dzieci.Speech.FruitsGame;
+import pl.marcinwroblewski.aplikacja_dzieci.Speech.FruitsLearn;
 import pl.marcinwroblewski.aplikacja_dzieci.Speech.RoomGame;
 import pl.marcinwroblewski.aplikacja_dzieci.Speech.RoomLearn;
 import pl.marcinwroblewski.aplikacja_dzieci.Speech.TableGame;
@@ -124,6 +126,14 @@ public class Speech_games extends Activity {
 
             case R.id.toys_game:
                 startActivity(new Intent(getApplicationContext(), ToysGame.class));
+                break;
+
+            case R.id.fruits_learn:
+                startActivity(new Intent(getApplicationContext(), FruitsLearn.class));
+                break;
+
+            case R.id.fruits_game:
+                startActivity(new Intent(getApplicationContext(), FruitsGame.class));
                 break;
 
             default:

@@ -33,32 +33,32 @@
 
     <!-- Dźwiękonaśladowcze -->
 
-        <!--Zwierzęta-->
+    <!--Zwierzęta-->
 
-            <string name="onomatopoeic_goat">Me Mee</string>
-            <string name="onomatopoeic_sheep">Be Bee</string>
-            <string name="onomatopoeic_cat">Miau Miau</string>
-            <string name="onomatopoeic_dog">Hau Hau</string>
-            <string name="onomatopoeic_cow">Mu Muu</string>
-            <string name="onomatopoeic_snake">Sss ss</string>
-            <string name="onomatopoeic_chicken">Ko ko ko</string>
+    <string name="onomatopoeic_goat">Me Mee</string>
+    <string name="onomatopoeic_sheep">Be Bee</string>
+    <string name="onomatopoeic_cat">Miau Miau</string>
+    <string name="onomatopoeic_dog">Hau Hau</string>
+    <string name="onomatopoeic_cow">Mu Muu</string>
+    <string name="onomatopoeic_snake">Sss ss</string>
+    <string name="onomatopoeic_chicken">Ko ko ko</string>
 
-        <!--Zwierzęta-->
+    <!--Zwierzęta-->
 
-        <!--
+    <!--
             TODO: inne dźwięki - pociąg, auto, zegar, pukanie do drzwi, kropla wody (kran),
                     telefon...
         -->
 
     <!-- Dźwiękonaśladowcze -->
 
-        <string name="animal_goat">Kozioł</string>
-        <string name="animal_sheep">Owca</string>
-        <string name="animal_cat">Kot</string>
-        <string name="animal_dog">Pies</string>
-        <string name="animal_cow">Krowa</string>
-        <string name="animal_snake">Wąż</string>
-        <string name="animal_chicken">Kurczak</string>
+    <string name="animal_goat">Kozioł</string>
+    <string name="animal_sheep">Owca</string>
+    <string name="animal_cat">Kot</string>
+    <string name="animal_dog">Pies</string>
+    <string name="animal_cow">Krowa</string>
+    <string name="animal_snake">Wąż</string>
+    <string name="animal_chicken">Kurczak</string>
 
     <!-- Zwierzęta gospodarcze
 
@@ -113,6 +113,17 @@
     <string name="samolot">Samolot</string>
     <string name="wozek">Wózek</string>
 
+    <!-- Owoce -->
+    <string name="ananas">Ananas</string>
+    <string name="arbuz">Arbuz</string>
+    <string name="banan">Banan</string>
+    <string name="gruszka">Gruszka</string>
+    <string name="jablko">Jabłko</string>
+    <string name="pomarancza">Pomarańcza</string>
+    <string name="sliwka">Śliwka</string>
+    <string name="truskawka">Truskawka</string>
+    <string name="winogrona">Winogrona</string>
+
 
     <string name="title_activity_motility">Grafomotoryka</string>
     <string name="title_activity_sequence_learn">Nauka układania sekwencji</string>
@@ -135,5 +146,7 @@
     <string name="title_activity_clothes_game">ClothesGame</string>
     <string name="title_activity_toys_learn">ToysLearn</string>
     <string name="title_activity_toys_game">ToysGame</string>
+    <string name="title_activity_fruits_learn">FruitsLearn</string>
+    <string name="title_activity_fruits_game">FruitsGame</string>
 
 </resources>

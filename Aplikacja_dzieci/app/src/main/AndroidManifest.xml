@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pl.marcinwroblewski.aplikacja_dzieci" >
+    package="pl.marcinwroblewski.aplikacja_dzieci">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <supports-screens
-        android:smallScreens="false"
-        android:normalScreens="false"
-        android:largeScreens="false"
-        android:xlargeScreens="true"
         android:anyDensity="true"
-        android:requiresSmallestWidthDp="600" />
+        android:largeScreens="false"
+        android:normalScreens="false"
+        android:requiresSmallestWidthDp="600"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo_small"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:theme="@style/WhiteTheme" >
+        android:theme="@style/WhiteTheme">
         <activity
             android:name=".Menus.GamesMenu"
             android:label="@string/app_name"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,39 +33,35 @@
             android:name=".Vowels.VowelDraw"
             android:label="@string/title_activity_vovel_draw"
             android:parentActivityName=".Vowels.VowelsScreen"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="pl.marcinwroblewski.aplikacja_dzieci.drawVowels" />
+                android:value="pl.marcinwroblewski.aplikacja_dzieci.Vowels.VowelDraw" />
         </activity>
         <activity
             android:name=".Settings.Settings"
             android:label="@string/title_activity_settings"
             android:screenOrientation="landscape"
-            android:windowSoftInputMode="adjustNothing" >
-        </activity>
+            android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name=".Vowels.VowelsScreen"
             android:label="@string/title_activity_games_menu"
             android:noHistory="true"
-            android:screenOrientation="landscape" >
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Vowels.VowelsGame"
             android:label="@string/title_activity_vowels_game"
             android:noHistory="true"
-            android:screenOrientation="landscape" >
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Reward"
-            android:label="@string/title_activity_reward" >
-        </activity>
+            android:label="@string/title_activity_reward" />
         <activity
             android:name=".Onomatopoeic.OnomatopoeicLearn"
             android:label="@string/title_activity_onomatopoeic_learn"
             android:noHistory="true"
             android:parentActivityName=".Menus.Speech_games"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
@@ -75,7 +71,7 @@
             android:label="@string/title_activity_onomatopoeic_game"
             android:noHistory="true"
             android:parentActivityName=".Menus.Speech_games"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
@@ -84,7 +80,7 @@
             android:name=".Motility.Motility"
             android:label="@string/title_activity_motility"
             android:noHistory="true"
-            android:parentActivityName=".Menus.GamesMenu" >
+            android:parentActivityName=".Menus.GamesMenu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Menus.GamesMenu" />
@@ -93,21 +89,20 @@
             android:name=".Menus.Speech_games"
             android:label="@string/speech"
             android:noHistory="false"
-            android:parentActivityName=".Menus.GamesMenu" >
+            android:parentActivityName=".Menus.GamesMenu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Menus.GamesMenu" />
->
+            >
         </activity>
         <activity
             android:name=".Sequence.SequenceLearn"
             android:label="@string/title_activity_sequence_learn"
-            android:noHistory="true" >
-        </activity>
+            android:noHistory="true" />
         <activity
             android:name=".Sequence.SequenceMenu"
             android:label="@string/title_activity_sequence_menu"
-            android:parentActivityName=".Menus.GamesMenu" >
+            android:parentActivityName=".Menus.GamesMenu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Menus.GamesMenu" />
@@ -115,7 +110,7 @@
         <activity
             android:name=".Motility.MotilityMenu"
             android:label="@string/title_activity_motility_menu"
-            android:parentActivityName=".Menus.GamesMenu" >
+            android:parentActivityName=".Menus.GamesMenu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Menus.GamesMenu" />
@@ -123,7 +118,7 @@
         <activity
             android:name=".Serial.SerialMenu"
             android:label="@string/title_activity_serial_menu"
-            android:parentActivityName=".Menus.GamesMenu" >
+            android:parentActivityName=".Menus.GamesMenu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Menus.GamesMenu" />
@@ -132,25 +127,25 @@
             android:name=".Serial.SerialLearn"
             android:label="@string/title_activity_serial_learn"
             android:noHistory="true"
-            android:parentActivityName=".Serial.SerialMenu" >
+            android:parentActivityName=".Serial.SerialMenu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Serial.SerialMenu" />
         </activity>
         <activity
-            android:name=".AnimalsLearn.EconomicAnimals"
+            android:name=".Onomatopoeic.AnimalsLearn.EconomicAnimalsLearn"
             android:label="@string/title_activity_economic"
             android:noHistory="true"
-            android:parentActivityName=".Menus.SpeechGames" >
+            android:parentActivityName=".Menus.Speech_games">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.SpeechGames" />
+                android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
         </activity>
         <activity
             android:name=".Speech.TableLearn"
             android:label="@string/title_activity_table_learn"
             android:noHistory="true"
-            android:parentActivityName=".Menus.GamesMenu" >
+            android:parentActivityName=".Menus.GamesMenu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.GamesMenu" />
@@ -159,7 +154,7 @@
             android:name=".Speech.TableGame"
             android:label="@string/title_activity_table_game"
             android:noHistory="true"
-            android:parentActivityName=".Menus.GamesMenu" >
+            android:parentActivityName=".Menus.GamesMenu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.GamesMenu" />
@@ -168,7 +163,7 @@
             android:name=".Speech.ColorsLearn"
             android:label="@string/title_activity_colors_learn"
             android:noHistory="true"
-            android:parentActivityName=".Menus.GamesMenu" >
+            android:parentActivityName=".Menus.GamesMenu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.GamesMenu" />
@@ -177,7 +172,7 @@
             android:name=".Speech.ColorsGame"
             android:label="@string/title_activity_colors_game"
             android:noHistory="true"
-            android:parentActivityName=".Menus.GamesMenu" >
+            android:parentActivityName=".Menus.GamesMenu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.GamesMenu" />
@@ -186,7 +181,7 @@
             android:name=".Speech.RoomGame"
             android:label="@string/title_activity_room_game"
             android:noHistory="true"
-            android:parentActivityName=".Menus.Speech_games" >
+            android:parentActivityName=".Menus.Speech_games">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
@@ -195,7 +190,7 @@
             android:name=".Speech.RoomLearn"
             android:label="@string/title_activity_room_learn"
             android:noHistory="true"
-            android:parentActivityName=".Menus.Speech_games" >
+            android:parentActivityName=".Menus.Speech_games">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
@@ -204,7 +199,7 @@
             android:name=".Speech.ClothesLearn"
             android:label="@string/title_activity_clothes_learn"
             android:noHistory="true"
-            android:parentActivityName=".Menus.Speech_games" >
+            android:parentActivityName=".Menus.Speech_games">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
@@ -213,7 +208,7 @@
             android:name=".Speech.ClothesGame"
             android:label="@string/title_activity_clothes_game"
             android:noHistory="true"
-            android:parentActivityName=".Menus.Speech_games" >
+            android:parentActivityName=".Menus.Speech_games">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
@@ -222,7 +217,7 @@
             android:name=".Speech.ToysLearn"
             android:label="@string/title_activity_toys_learn"
             android:noHistory="true"
-            android:parentActivityName=".Menus.Speech_games" >
+            android:parentActivityName=".Menus.Speech_games">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
@@ -231,7 +226,23 @@
             android:name=".Speech.ToysGame"
             android:label="@string/title_activity_toys_game"
             android:noHistory="true"
-            android:parentActivityName=".Menus.Speech_games" >
+            android:parentActivityName=".Menus.Speech_games">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
+        </activity>
+        <activity
+            android:name=".Speech.FruitsLearn"
+            android:label="@string/title_activity_fruits_learn"
+            android:parentActivityName=".Menus.Speech_games">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
+        </activity>
+        <activity
+            android:name=".Speech.FruitsGame"
+            android:label="@string/title_activity_fruits_game"
+            android:parentActivityName=".Menus.Speech_games">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
