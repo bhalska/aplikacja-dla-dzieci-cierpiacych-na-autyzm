@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="pl.marcinwroblewski.aplikacja_dzieci">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -142,6 +143,15 @@
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
         </activity>
         <activity
+            android:name=".Onomatopoeic.AnimalsLearn.EconomicAnimalsGame"
+            android:label="@string/title_activity_economic"
+            android:noHistory="true"
+            android:parentActivityName=".Menus.Speech_games">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />
+        </activity>
+        <activity
             android:name=".Speech.TableLearn"
             android:label="@string/title_activity_table_learn"
             android:noHistory="true"
@@ -234,7 +244,8 @@
         <activity
             android:name=".Speech.FruitsLearn"
             android:label="@string/title_activity_fruits_learn"
-            android:parentActivityName=".Menus.Speech_games">
+            android:parentActivityName=".Menus.Speech_games"
+            tools:ignore="InnerclassSeparator">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.marcinwroblewski.aplikacja_dzieci.Menus.Speech_games" />

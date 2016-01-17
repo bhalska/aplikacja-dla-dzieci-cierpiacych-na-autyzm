@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import pl.marcinwroblewski.aplikacja_dzieci.Onomatopoeic.AnimalsLearn.EconomicAnimalsGame;
 import pl.marcinwroblewski.aplikacja_dzieci.Onomatopoeic.AnimalsLearn.EconomicAnimalsLearn;
 import pl.marcinwroblewski.aplikacja_dzieci.Onomatopoeic.OnomatopoeicGame;
 import pl.marcinwroblewski.aplikacja_dzieci.Onomatopoeic.OnomatopoeicLearn;
@@ -85,7 +86,7 @@ public class Speech_games extends Activity {
                 break;
 
             case R.id.economic_animals_game:
-                startActivity(new Intent(getApplicationContext(), EconomicAnimalsLearn.class));
+                startActivity(new Intent(getApplicationContext(), EconomicAnimalsGame.class));
                 break;
 
             case R.id.table_elements_learn:

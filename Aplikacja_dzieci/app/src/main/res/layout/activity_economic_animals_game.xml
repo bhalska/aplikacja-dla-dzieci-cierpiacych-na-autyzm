@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/onomatopoeic_bg"
+    tools:context="pl.marcinwroblewski.aplikacja_dzieci.Onomatopoeic.OnomatopoeicLearn">
+
+
+    <!-- Fake ActionBar :3 -->
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/white_background">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="sendBack"
+
+            android:padding="@dimen/action_bar_padding"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/action_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/action_bar_padding"
+
+            android:text="Samogłoski"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/action_bar_text_size" />
+
+        <ImageView
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/action_bar_padding"
+            android:clickable="true"
+            android:contentDescription="Przycisk ustawień"
+            android:onClick="sendToSettings"
+
+            android:padding="@dimen/action_bar_padding"
+            android:src="@drawable/settings" />
+
+        <ImageView
+            android:id="@+id/print_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/settings_button"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:contentDescription="Przycisk wydruku"
+            android:padding="@dimen/action_bar_padding"
+            android:src="@drawable/print"
+
+            />
+
+    </RelativeLayout>
+    <!-- Fake ActionBar :| -->
+
+
+    <LinearLayout
+        android:id="@id/app_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@color/aqua_background"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/app_margin">
+
+            <ImageView
+                android:id="@+id/animal1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/animal_dimen"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
+                android:layout_weight="1"
+                android:clickable="true"
+
+                android:onClick="check"
+                android:src="@drawable/goat" />
+
+            <ImageView
+                android:id="@+id/animal2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/animal_dimen"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
+                android:layout_toRightOf="@id/animal1"
+                android:layout_weight="1"
+                android:clickable="true"
+
+                android:onClick="check"
+                android:src="@drawable/cat" />
+
+            <ImageView
+                android:id="@+id/animal3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/animal_dimen"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
+                android:layout_toRightOf="@id/animal2"
+                android:layout_weight="1"
+                android:clickable="true"
+
+                android:onClick="check"
+                android:src="@drawable/sheep" />
+
+            <ImageView
+                android:id="@+id/animal4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/animal_dimen"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
+                android:layout_toRightOf="@id/animal3"
+                android:layout_weight="1"
+                android:clickable="true"
+
+                android:onClick="check"
+                android:src="@drawable/chicken" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/onomatopoeic_container"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/onomatopoeic_word"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/purple"
+
+                android:gravity="center"
+                android:text="Kot"
+                android:textColor="@color/white"
+                android:textSize="@dimen/onomatopoeic_text_size" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

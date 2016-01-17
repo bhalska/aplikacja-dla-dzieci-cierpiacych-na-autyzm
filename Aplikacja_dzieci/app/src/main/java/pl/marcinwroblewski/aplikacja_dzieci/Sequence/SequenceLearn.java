@@ -1,7 +1,7 @@
 package pl.marcinwroblewski.aplikacja_dzieci.Sequence;
 
-import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.PointF;
@@ -21,12 +21,14 @@ import java.util.Random;
 import pl.marcinwroblewski.aplikacja_dzieci.R;
 import pl.marcinwroblewski.aplikacja_dzieci.Reward;
 import pl.marcinwroblewski.aplikacja_dzieci.Settings.Settings;
+import pl.marcinwroblewski.aplikacja_dzieci.Usable.Screen;
 import pl.marcinwroblewski.aplikacja_dzieci.Usable.Utilities;
 
 
 public class SequenceLearn extends Activity {
 
 
+    int[] sentElements = new int[3];
     private ImageView image1, image2, image3, image4, image5, image6,
             container1, container2, container3, container4, container5, container6;
     private ImageView[] containers, seqElements;
@@ -38,16 +40,8 @@ public class SequenceLearn extends Activity {
             containerLocations4, containerLocations5, containerLocations6;
     private RelativeLayout bg;
     private Utilities utils;
-
     private ImageView originalSeq1, originalSeq2, originalSeq3;
-
-
     private Drawable[] elements;
-
-
-    int[] sentElements = new int[3];
-
-
     private int[] originalSequence;
 
 
@@ -60,6 +54,7 @@ public class SequenceLearn extends Activity {
         getActionBar().hide();
 
         utils = new Utilities();
+
 
 
         //getting info from menu
@@ -131,30 +126,8 @@ public class SequenceLearn extends Activity {
 
 
         imagesIDs = new int[6];
-        /*int[] ids = new int[0];
-            if(elementsType == CLOUDS_AND_SUNS && elementsCount == 2){
-                ids = new int[]{1, 2, 1, 2, 1, 2};
-            }else if(elementsType == CLOUDS_AND_SUNS && elementsCount == 3){
-                ids = new int[]{1, 2, 3, 1, 2, 3};
-            }else if(elementsType == CARS_AND_PLANES && elementsCount == 2){
-                ids = new int[]{4, 5, 4, 5, 4, 5};
-            }else if(elementsType == CARS_AND_PLANES && elementsCount == 3){
-                ids = new int[]{4, 5, 6, 4, 5, 6};
-            }*/
-
-
-
 
         utils.reset();
-        /*for(int i=0; i<imagesIDs.length; i++) {
-            imagesIDs[i] = utils.randomInt(ids);
-            Log.d(getPackageName(), "images ID " + imagesIDs[i] + " ");
-        }*/
-
-
-
-
-
 
                                     //setting elements
         image1 = (ImageView) findViewById(R.id.image1);
@@ -177,36 +150,16 @@ public class SequenceLearn extends Activity {
             imagesIDs[i] = i % elements.length;
         }
 
-        /*setDrawableByID(image1, imagesIDs[0]);*/
         setMovementAndCollisions(image1, imagesIDs[0]);
-
-       /* setDrawableByID(image2, imagesIDs[1]);*/
         setMovementAndCollisions(image2, imagesIDs[1]);
-
-       /* setDrawableByID(image3, imagesIDs[2]);*/
         setMovementAndCollisions(image3, imagesIDs[2]);
-
-        /*setDrawableByID(image4, imagesIDs[3]);*/
         setMovementAndCollisions(image4, imagesIDs[3]);
-
-        /*setDrawableByID(image5, imagesIDs[4]);*/
         setMovementAndCollisions(image5, imagesIDs[4]);
-
-        /*setDrawableByID(image6, imagesIDs[5]);*/
         setMovementAndCollisions(image6, imagesIDs[5]);
-
-
-
-
 
                                     //setting sequence
         utils.reset();
 
-        /*originalSequence = new int[]{
-                utils.randomInt(ints),
-                utils.randomInt(ints),
-                utils.randomInt(ints)
-        };*/
 
         originalSequence = new int[elements.length];
         for(int i=0; i<originalSequence.length; i++){
@@ -214,15 +167,11 @@ public class SequenceLearn extends Activity {
         }
 
         originalSeq1 = (ImageView) findViewById(R.id.first_seq_element);
-        /*setDrawableByID(originalSeq1, originalSequence[0]);*/
         originalSeq1.setImageDrawable(getResources().getDrawable(sentElements[0]));
         originalSeq2 = (ImageView) findViewById(R.id.second_seq_element);
-        /*setDrawableByID(originalSeq2, originalSequence[1]);*/
         originalSeq2.setImageDrawable(getResources().getDrawable(sentElements[1]));
         originalSeq3 = (ImageView) findViewById(R.id.third_seq_element);
-        /*if(elementsCount > 2) {
-            setDrawableByID(originalSeq3, originalSequence[2]);
-        }*/
+
         if(sentElements[2] != 0) {
             originalSeq3.setImageDrawable(getResources().getDrawable(sentElements[2]));
         }
@@ -260,9 +209,16 @@ public class SequenceLearn extends Activity {
 
                     int counter = 1;
 
+                    Screen screen = new Screen(getApplicationContext());
+
                     for (ImageView seqElement : seqElements) {
-                        seqElement.setX((seqElement.getWidth() * (random.nextInt(2)+1)) * counter);
-                        seqElement.setY((seqElement.getHeight() * (random.nextInt(2)+1)));
+                        seqElement.setX(
+                                Math.min(seqElement.getWidth() * (random.nextFloat() + 1) * counter / 2,
+                                        screen.getWidth()));
+                        seqElement.setY(
+                                Math.min((random.nextFloat() * 100) + screen.getHeight() / 3,
+                                        screen.getHeight() / 2 - seqElement.getHeight()));
+
 
                         seqElement.setVisibility(View.VISIBLE);
                         counter++;
@@ -441,10 +397,16 @@ public class SequenceLearn extends Activity {
         }
 
         int counter = 1;
+        Screen screen = new Screen(getApplicationContext());
 
         for (ImageView seqElement : seqElements) {
-            seqElement.setX((seqElement.getWidth() * (random.nextInt(2)+1)) * counter);
-            seqElement.setY((seqElement.getHeight() * (random.nextInt(2)+1)));
+
+            seqElement.setX(
+                    Math.min(seqElement.getWidth() * (random.nextFloat() + 1) * counter / 2,
+                            screen.getWidth()));
+            seqElement.setY(
+                    Math.min((random.nextFloat() * 150) + screen.getHeight() / 8,
+                            screen.getHeight() / 2 - seqElement.getHeight()));
 
             seqElement.setVisibility(View.VISIBLE);
             counter++;
@@ -484,7 +446,7 @@ public class SequenceLearn extends Activity {
 
     public void setActionBarTextValue(TextView actionBarText, String gameName){
 
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("pl.marcinwroblewski.aplikacja_dzieci", getApplicationContext().MODE_PRIVATE);
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("pl.marcinwroblewski.aplikacja_dzieci", Context.MODE_PRIVATE);
 
         if(!pref.getString("child_name", "").isEmpty() && !pref.getString("child_name", "").contains(" ")){
             actionBarText.setText(pref.getString("child_name", "") + " gra w " + gameName);

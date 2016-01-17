@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pl.marcinwroblewski.aplikacja_dzieci.Menus.SpeechGames"
-    android:background="@drawable/app_background_vowel">
+    android:background="@drawable/app_background_vowel"
+    tools:context="pl.marcinwroblewski.aplikacja_dzieci.Menus.SpeechGames">
 
     <!-- Fake ActionBar :3 -->
     <RelativeLayout
@@ -16,12 +16,12 @@
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/back"
             android:layout_centerVertical="true"
-            android:padding="@dimen/action_bar_padding"
-
             android:clickable="true"
-            android:onClick="sendBack"/>
+            android:onClick="sendBack"
+
+            android:padding="@dimen/action_bar_padding"
+            android:src="@drawable/back" />
 
         <TextView
             android:id="@+id/action_bar_text"
@@ -31,33 +31,33 @@
             android:padding="@dimen/action_bar_padding"
 
             android:text="Mowa bierna"
-            android:textSize="@dimen/action_bar_text_size"
-            android:textColor="@color/blue"/>
+            android:textColor="@color/blue"
+            android:textSize="@dimen/action_bar_text_size" />
 
         <ImageView
             android:id="@+id/settings_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="Przycisk ustawień"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/action_bar_padding"
-            android:src="@drawable/settings"
             android:layout_centerVertical="true"
-            android:padding="@dimen/action_bar_padding"
-
+            android:layout_marginRight="@dimen/action_bar_padding"
             android:clickable="true"
-            android:onClick="sendToSettings"/>
+            android:contentDescription="Przycisk ustawień"
+            android:onClick="sendToSettings"
+
+            android:padding="@dimen/action_bar_padding"
+            android:src="@drawable/settings" />
 
         <ImageView
             android:id="@+id/print_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="Przycisk wydruku"
             android:layout_alignRight="@id/settings_button"
-            android:layout_marginRight="50dp"
-            android:src="@drawable/print"
             android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:contentDescription="Przycisk wydruku"
             android:padding="@dimen/action_bar_padding"
+            android:src="@drawable/print"
 
             />
 
@@ -75,9 +75,9 @@
             <LinearLayout
                 android:id="@+id/app_container"
                 android:layout_width="match_parent"
-                android:orientation="vertical"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/vowel_description"
@@ -86,10 +86,10 @@
                     android:layout_marginTop="15dp"
 
 
-                    android:text="Samogłoski"
-                    android:textColor="@color/blue"
                     android:background="@color/white_background"
                     android:gravity="center"
+                    android:text="Samogłoski"
+                    android:textColor="@color/blue"
                     android:textSize="@dimen/defalut_text_size"/>
 
                         <LinearLayout
@@ -100,31 +100,31 @@
                                 <Button
                                     android:id="@+id/vowels_learn"
                                     android:layout_width="0dp"
-                                    android:layout_weight="0.1"
                                     android:layout_height="@dimen/default_controls_heigth"
+                                    android:layout_weight="0.1"
 
-                                    android:text="Nauka"
-                                    android:textColor="@color/white"
                                     android:background="@color/blue_background"
                                     android:gravity="center"
-                                    android:textSize="@dimen/defalut_text_size"
+                                    android:onClick="goTo"
+                                    android:text="Nauka"
+                                    android:textColor="@color/white"
 
-                                    android:onClick="goTo"/>
+                                    android:textSize="@dimen/defalut_text_size" />
 
                                 <Button
                                     android:id="@+id/vowels_game"
                                     android:layout_width="0dp"
-                                    android:layout_weight="0.1"
                                     android:layout_height="@dimen/default_controls_heigth"
+                                    android:layout_weight="0.1"
 
-                                    android:text="Gra"
-                                    android:textColor="@color/white"
                                     android:background="@color/unactive_bg"
                                     android:clickable="false"
                                     android:gravity="center"
-                                    android:textSize="@dimen/defalut_text_size"
+                                    android:onClick="goTo"
+                                    android:text="Gra"
+                                    android:textColor="@color/white"
 
-                                    android:onClick="goTo"/>
+                                    android:textSize="@dimen/defalut_text_size" />
 
                         </LinearLayout>
 
@@ -135,10 +135,10 @@
                     android:layout_marginTop="15dp"
 
 
-                    android:text="Wyrazy dźwiękonaśladowcze"
-                    android:textColor="@color/blue"
                     android:background="@color/white_background"
                     android:gravity="center"
+                    android:text="Wyrazy dźwiękonaśladowcze"
+                    android:textColor="@color/blue"
                     android:textSize="@dimen/defalut_text_size"/>
 
                 <LinearLayout
@@ -148,30 +148,30 @@
                     <Button
                         android:id="@+id/onomatopoeic_learn"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Nauka"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
                         android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
+                        android:onClick="goTo"
+                        android:text="Nauka"
+                        android:textColor="@color/white"
 
-                        android:onClick="goTo"/>
+                        android:textSize="@dimen/defalut_text_size" />
 
                     <Button
                         android:id="@+id/onomatopoeic_game"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Gra"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
                         android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
+                        android:onClick="goTo"
+                        android:text="Gra"
+                        android:textColor="@color/white"
 
-                        android:onClick="goTo"/>
+                        android:textSize="@dimen/defalut_text_size" />
 
                 </LinearLayout>
 
@@ -182,10 +182,10 @@
                     android:layout_marginTop="15dp"
 
 
-                    android:text="Sztućce"
-                    android:textColor="@color/blue"
                     android:background="@color/white_background"
                     android:gravity="center"
+                    android:text="Sztućce"
+                    android:textColor="@color/blue"
                     android:textSize="@dimen/defalut_text_size"/>
 
 
@@ -198,31 +198,31 @@
                     <Button
                         android:id="@+id/table_elements_learn"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Nauka"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
-                        android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
-
                         android:clickable="true"
-                        android:onClick="goTo"/>
+                        android:gravity="center"
+                        android:onClick="goTo"
+                        android:text="Nauka"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/defalut_text_size" />
 
                     <Button
                         android:id="@+id/table_elements_game"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Gra"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
                         android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
+                        android:onClick="goTo"
+                        android:text="Gra"
+                        android:textColor="@color/white"
 
-                        android:onClick="goTo"/>
+                        android:textSize="@dimen/defalut_text_size" />
 
                 </LinearLayout>
 
@@ -233,10 +233,10 @@
                     android:layout_marginTop="15dp"
 
 
-                    android:text="Kolory"
-                    android:textColor="@color/blue"
                     android:background="@color/white_background"
                     android:gravity="center"
+                    android:text="Kolory"
+                    android:textColor="@color/blue"
                     android:textSize="@dimen/defalut_text_size"/>
 
                 <LinearLayout
@@ -246,31 +246,31 @@
                     <Button
                         android:id="@+id/colors_learn"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Nauka"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
-                        android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
-
                         android:clickable="true"
-                        android:onClick="goTo"/>
+                        android:gravity="center"
+                        android:onClick="goTo"
+                        android:text="Nauka"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/defalut_text_size" />
 
                     <Button
                         android:id="@+id/colors_game"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Gra"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
                         android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
+                        android:onClick="goTo"
+                        android:text="Gra"
+                        android:textColor="@color/white"
 
-                        android:onClick="goTo"/>
+                        android:textSize="@dimen/defalut_text_size" />
 
                 </LinearLayout>
 
@@ -282,10 +282,10 @@
                     android:layout_marginTop="15dp"
 
 
-                    android:text="Meble"
-                    android:textColor="@color/blue"
                     android:background="@color/white_background"
                     android:gravity="center"
+                    android:text="Meble"
+                    android:textColor="@color/blue"
                     android:textSize="@dimen/defalut_text_size"/>
 
 
@@ -298,31 +298,31 @@
                     <Button
                         android:id="@+id/room_learn"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Nauka"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
-                        android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
-
                         android:clickable="true"
-                        android:onClick="goTo"/>
+                        android:gravity="center"
+                        android:onClick="goTo"
+                        android:text="Nauka"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/defalut_text_size" />
 
                     <Button
                         android:id="@+id/room_game"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Gra"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
                         android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
+                        android:onClick="goTo"
+                        android:text="Gra"
+                        android:textColor="@color/white"
 
-                        android:onClick="goTo"/>
+                        android:textSize="@dimen/defalut_text_size" />
 
                 </LinearLayout>
 
@@ -334,10 +334,10 @@
                     android:layout_marginTop="15dp"
 
 
-                    android:text="Ciuchy"
-                    android:textColor="@color/blue"
                     android:background="@color/white_background"
                     android:gravity="center"
+                    android:text="Ciuchy"
+                    android:textColor="@color/blue"
                     android:textSize="@dimen/defalut_text_size"/>
 
 
@@ -350,31 +350,31 @@
                     <Button
                         android:id="@+id/clothes_learn"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Nauka"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
-                        android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
-
                         android:clickable="true"
-                        android:onClick="goTo"/>
+                        android:gravity="center"
+                        android:onClick="goTo"
+                        android:text="Nauka"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/defalut_text_size" />
 
                     <Button
                         android:id="@+id/clothes_game"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Gra"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
                         android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
+                        android:onClick="goTo"
+                        android:text="Gra"
+                        android:textColor="@color/white"
 
-                        android:onClick="goTo"/>
+                        android:textSize="@dimen/defalut_text_size" />
 
                 </LinearLayout>
 
@@ -386,10 +386,10 @@
                     android:layout_marginTop="15dp"
 
 
-                    android:text="Zabawki"
-                    android:textColor="@color/blue"
                     android:background="@color/white_background"
                     android:gravity="center"
+                    android:text="Zabawki"
+                    android:textColor="@color/blue"
                     android:textSize="@dimen/defalut_text_size"/>
 
 
@@ -402,31 +402,31 @@
                     <Button
                         android:id="@+id/toys_learn"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Nauka"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
-                        android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
-
                         android:clickable="true"
-                        android:onClick="goTo"/>
+                        android:gravity="center"
+                        android:onClick="goTo"
+                        android:text="Nauka"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/defalut_text_size" />
 
                     <Button
                         android:id="@+id/toys_game"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Gra"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
                         android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
+                        android:onClick="goTo"
+                        android:text="Gra"
+                        android:textColor="@color/white"
 
-                        android:onClick="goTo"/>
+                        android:textSize="@dimen/defalut_text_size" />
 
                 </LinearLayout>
 
@@ -437,10 +437,10 @@
                     android:layout_marginTop="15dp"
 
 
-                    android:text="Zwierzęta"
-                    android:textColor="@color/blue"
                     android:background="@color/white_background"
                     android:gravity="center"
+                    android:text="Zwierzęta"
+                    android:textColor="@color/blue"
 
                     android:textSize="@dimen/defalut_text_size"/>
 
@@ -452,32 +452,32 @@
                     <Button
                         android:id="@+id/economic_animals_learn"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Nauka"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
                         android:clickable="true"
                         android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
+                        android:onClick="goTo"
+                        android:text="Nauka"
+                        android:textColor="@color/white"
 
-                        android:onClick="goTo"/>
+                        android:textSize="@dimen/defalut_text_size" />
 
                     <Button
                         android:id="@+id/economic_animals_game"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
+                        android:background="@color/blue_background"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="goTo"
                         android:text="Gra"
                         android:textColor="@color/white"
-                        android:background="@color/unactive_bg"
-                        android:clickable="false"
-                        android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
 
-                        android:onClick="goTo"/>
+                        android:textSize="@dimen/defalut_text_size" />
 
                 </LinearLayout>
 
@@ -488,10 +488,10 @@
                     android:layout_marginTop="15dp"
 
 
-                    android:text="Owoce"
-                    android:textColor="@color/blue"
                     android:background="@color/white_background"
                     android:gravity="center"
+                    android:text="Owoce"
+                    android:textColor="@color/blue"
 
                     android:textSize="@dimen/defalut_text_size"/>
 
@@ -503,32 +503,32 @@
                     <Button
                         android:id="@+id/fruits_learn"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Nauka"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
                         android:clickable="true"
                         android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
+                        android:onClick="goTo"
+                        android:text="Nauka"
+                        android:textColor="@color/white"
 
-                        android:onClick="goTo"/>
+                        android:textSize="@dimen/defalut_text_size" />
 
                     <Button
                         android:id="@+id/fruits_game"
                         android:layout_width="0dp"
-                        android:layout_weight="0.1"
                         android:layout_height="@dimen/default_controls_heigth"
+                        android:layout_weight="0.1"
 
-                        android:text="Gra"
-                        android:textColor="@color/white"
                         android:background="@color/blue_background"
                         android:clickable="true"
                         android:gravity="center"
-                        android:textSize="@dimen/defalut_text_size"
+                        android:onClick="goTo"
+                        android:text="Gra"
+                        android:textColor="@color/white"
 
-                        android:onClick="goTo"/>
+                        android:textSize="@dimen/defalut_text_size" />
 
                 </LinearLayout>
 

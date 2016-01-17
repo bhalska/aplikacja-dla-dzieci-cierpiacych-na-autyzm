@@ -1,211 +1,190 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/background"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pl.marcinwroblewski.aplikacja_dzieci.Serial.SerialLearn">
+    android:background="@drawable/serial_bg"
+    android:orientation="horizontal"
+    tools:context=".MyActivity">
 
+    <!-- Fake ActionBar :3 -->
     <RelativeLayout
-
-        xmlns:android="http://schemas.android.com/apk/res/android"
-
-        xmlns:tools="http://schemas.android.com/tools"
-
-        android:id="@+id/background"
+        android:id="@+id/action_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MyActivity"
-        android:background="@drawable/serial_bg"
-        android:orientation="horizontal"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/white_background"
         >
 
-        <!-- Fake ActionBar :3 -->
-        <RelativeLayout
-            android:id="@+id/action_bar"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/action_bar_height"
-            android:background="@color/white_background"
-            >
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="sendBack"
 
-            <ImageView
-                android:id="@+id/back_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/back"
-                android:layout_centerVertical="true"
-                android:padding="@dimen/action_bar_padding"
-
-                android:clickable="true"
-                android:onClick="sendBack"/>
+            android:padding="@dimen/action_bar_padding"
+            android:src="@drawable/back" />
 
 
+        <TextView
+            android:id="@+id/action_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/action_bar_padding"
+
+            android:text="Samogłoski"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/action_bar_text_size" />
+
+        <ImageView
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/action_bar_padding"
+            android:clickable="true"
+            android:contentDescription="Przycisk ustawień"
+            android:onClick="sendToSettings"
+
+            android:padding="@dimen/action_bar_padding"
+            android:src="@drawable/settings" />
+
+        <ImageView
+            android:id="@+id/print_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/settings_button"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:contentDescription="Przycisk wydruku"
+            android:padding="@dimen/action_bar_padding"
+            android:src="@drawable/print"
+
+            />
+
+    </RelativeLayout>
+    <!-- Fake ActionBar :| -->
 
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+
+        android:background="@color/white_background"
+        android:clickable="true"
+
+        android:onClick="reset"
+        android:src="@drawable/refresh" />
 
 
+    <RelativeLayout
+        android:id="@id/app_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar">
 
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
 
-            <TextView
-                android:id="@+id/action_bar_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:padding="@dimen/action_bar_padding"
-
-                android:text="Samogłoski"
-                android:textSize="@dimen/action_bar_text_size"
-                android:textColor="@color/blue"/>
-
-            <ImageView
-                android:id="@+id/settings_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="Przycisk ustawień"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/action_bar_padding"
-                android:src="@drawable/settings"
-                android:layout_centerVertical="true"
-                android:padding="@dimen/action_bar_padding"
-
-                android:clickable="true"
-                android:onClick="sendToSettings"/>
-
-            <ImageView
-                android:id="@+id/print_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="Przycisk wydruku"
-                android:layout_alignRight="@id/settings_button"
-                android:layout_marginRight="50dp"
-                android:src="@drawable/print"
-                android:layout_centerVertical="true"
-                android:padding="@dimen/action_bar_padding"
-
-                />
-
-        </RelativeLayout>
-        <!-- Fake ActionBar :| -->
+            <RelativeLayout
+                android:id="@+id/original_sequence"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/blue_background"
+                android:orientation="horizontal" />
+        </LinearLayout>
 
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/action_bar"
-
-            android:src="@drawable/refresh"
+            android:id="@+id/image1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerInParent="true"
             android:background="@color/white_background"
+            android:src="@drawable/car" />
 
-            android:clickable="true"
-            android:onClick="reset"/>
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/image1"
+            android:background="@color/white_background"
+            android:src="@drawable/sun_big" />
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/image2"
+            android:background="@color/white_background"
+            android:src="@drawable/cloud_big" />
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/image1"
+            android:background="@color/white_background"
+            android:src="@drawable/car" />
 
 
-        <RelativeLayout
-            android:id="@id/app_container"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/action_bar"
-
-            android:padding="25dp">
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true">
-                <RelativeLayout
-                    android:id="@+id/original_sequence"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:orientation="horizontal"
-                    android:background="@color/blue_background"/>
-            </LinearLayout>
-
-
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
 
             <ImageView
-                android:id="@+id/image1"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:src="@drawable/car"
-                android:layout_centerInParent="true"
-                android:background="@color/white_background"/>
+                android:id="@+id/container1"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="0.1"
+                android:background="@color/white_background" />
 
             <ImageView
-                android:id="@+id/image2"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:src="@drawable/sun_big"
-                android:layout_toRightOf="@id/image1"
-                android:layout_centerVertical="true"
-                android:background="@color/white_background"/>
+                android:id="@+id/container2"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_toRightOf="@id/container1"
+                android:layout_weight="0.1"
+                android:background="@color/white" />
 
             <ImageView
-                android:id="@+id/image3"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:src="@drawable/cloud_big"
-                android:layout_toRightOf="@id/image2"
-                android:layout_centerVertical="true"
-                android:background="@color/white_background"/>
+                android:id="@+id/container3"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_toRightOf="@id/container2"
+                android:layout_weight="0.1"
+                android:background="@color/white_background" />
 
             <ImageView
-                android:id="@+id/image4"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:src="@drawable/car"
-                android:layout_toLeftOf="@id/image1"
-                android:layout_centerVertical="true"
-                android:background="@color/white_background"/>
+                android:id="@+id/container4"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_toRightOf="@id/container3"
+                android:layout_weight="0.1"
+                android:background="@color/white" />
 
 
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true">
-
-                <ImageView
-                    android:id="@+id/container1"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_weight="0.1"
-                    android:layout_alignParentLeft="true"
-                    android:background="@color/white_background"
-                    />
-
-                <ImageView
-                    android:id="@+id/container2"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_weight="0.1"
-                    android:layout_toRightOf="@id/container1"
-                    android:background="@color/white"/>
-
-                <ImageView
-                    android:id="@+id/container3"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_weight="0.1"
-                    android:layout_toRightOf="@id/container2"
-                    android:background="@color/white_background"/>
-
-                <ImageView
-                    android:id="@+id/container4"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_weight="0.1"
-                    android:layout_toRightOf="@id/container3"
-                    android:background="@color/white"/>
-
-
-            </LinearLayout>
-        </RelativeLayout>
-
-
+        </LinearLayout>
     </RelativeLayout>
 
 
 </RelativeLayout>
+

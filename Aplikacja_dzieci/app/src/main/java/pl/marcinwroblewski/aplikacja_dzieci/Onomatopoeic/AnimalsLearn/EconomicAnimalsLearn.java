@@ -39,7 +39,7 @@ public class EconomicAnimalsLearn extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_economic_animals);
+        setContentView(R.layout.activity_economic_animals_learn);
 
         getActionBar().hide();
 

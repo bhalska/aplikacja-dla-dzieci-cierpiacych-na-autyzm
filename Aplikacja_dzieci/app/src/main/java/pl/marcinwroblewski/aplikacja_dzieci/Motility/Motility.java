@@ -1,6 +1,7 @@
 package pl.marcinwroblewski.aplikacja_dzieci.Motility;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -25,6 +26,7 @@ import pl.marcinwroblewski.aplikacja_dzieci.Settings.Settings;
 public class Motility extends Activity {
 
 
+    int selectedLevel = 0;
     private ImageView car, carCrashed, reset;
     private View bg;
     private TextView actionBarText;
@@ -35,10 +37,6 @@ public class Motility extends Activity {
     private int pixelColor1, pixelColor2, pixelColor3, pixelColor4;
     private int endColor, badColor;
     private int carLocations[];
-
-
-    int selectedLevel = 0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +68,7 @@ public class Motility extends Activity {
         setActionBarTextValue(actionBarText, "grafomotorykę");
 
 
-        bg = (View) findViewById(R.id.background);
+        bg = findViewById(R.id.background);
 
 
 
@@ -114,9 +112,6 @@ public class Motility extends Activity {
         putToUI.start();
 
 
-
-
-
         car.setOnTouchListener(new View.OnTouchListener(){
 
             PointF DownPT = new PointF();
@@ -128,8 +123,6 @@ public class Motility extends Activity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 int eventID = event.getAction();
-
-
 
                 switch (eventID) {
                     case MotionEvent.ACTION_MOVE:
@@ -151,23 +144,18 @@ public class Motility extends Activity {
 
                         if(!isCarCrashed) {
                             if (pixelColor1 == badColor) {
+                                carCrashed.setX(car.getX());
+                                carCrashed.setY(car.getY());
+                                carCrashed.setVisibility(View.VISIBLE);
 
+                                car.setVisibility(View.INVISIBLE);
 
-
-                                    carCrashed.setX(car.getX());
-                                    carCrashed.setY(car.getY());
-                                    carCrashed.setVisibility(View.VISIBLE);
-
-                                    car.setVisibility(View.INVISIBLE);
-
-                                    isCarCrashed = true;
-                                    Log.d(getPackageName(), "pxl1 crashed");
+                                isCarCrashed = true;
+                                Log.d(getPackageName(), "pxl1 crashed");
 
                             }else if(pixelColor1 == endColor){
                                     goToReward(true);
                             }else if (pixelColor2 == badColor) {
-
-
 
                                 carCrashed.setX(car.getX());
                                 carCrashed.setY(car.getY());
@@ -183,8 +171,6 @@ public class Motility extends Activity {
                                 goToReward(true);
                             }else if (pixelColor3 == badColor) {
 
-
-
                                 carCrashed.setX(car.getX());
                                 carCrashed.setY(car.getY());
                                 carCrashed.setVisibility(View.VISIBLE);
@@ -199,8 +185,6 @@ public class Motility extends Activity {
                                 goToReward(true);
                             }else if (pixelColor4 == badColor) {
 
-
-
                                 carCrashed.setX(car.getX());
                                 carCrashed.setY(car.getY());
                                 carCrashed.setVisibility(View.VISIBLE);
@@ -208,7 +192,6 @@ public class Motility extends Activity {
                                 car.setVisibility(View.INVISIBLE);
 
                                 isCarCrashed = true;
-
 
                                 Log.d(getPackageName(), "pxl4 crashed");
                             }else if(pixelColor4 == endColor){
@@ -222,7 +205,6 @@ public class Motility extends Activity {
                         DownPT.y = event.getY();
                         StartPT = new PointF(car.getX(), car.getY());
                         break;
-
 
                 }
 
@@ -271,7 +253,7 @@ public class Motility extends Activity {
 
     public void setActionBarTextValue(TextView actionBarText, String gameName){
 
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("pl.marcinwroblewski.aplikacja_dzieci", getApplicationContext().MODE_PRIVATE);
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("pl.marcinwroblewski.aplikacja_dzieci", Context.MODE_PRIVATE);
 
         if(!pref.getString("child_name", "").isEmpty() && !pref.getString("child_name", "").contains(" ")){
             actionBarText.setText(pref.getString("child_name", "") + " gra w " + gameName);
@@ -304,7 +286,6 @@ public class Motility extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        reset();
     }
 
     public void sendBack(View view) {

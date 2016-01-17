@@ -22,10 +22,12 @@ import java.util.Random;
 import pl.marcinwroblewski.aplikacja_dzieci.R;
 import pl.marcinwroblewski.aplikacja_dzieci.Reward;
 import pl.marcinwroblewski.aplikacja_dzieci.Settings.Settings;
+import pl.marcinwroblewski.aplikacja_dzieci.Usable.Screen;
 
 
 public class SerialLearn extends Activity {
 
+    private final int SIZE_MULTIPLIER = 20;
     private ImageView image1, image2, image3, image4,
             container1, container2, container3, container4;
     private ImageView[] containers, seqElements;
@@ -34,7 +36,6 @@ public class SerialLearn extends Activity {
     private int[] containersIDs, imagesIDs;
     private int[] containerLocations1, containerLocations2, containerLocations3,
             containerLocations4;
-    private final int SIZE_MULTIPLIER = 20;
     private RelativeLayout originalSeqL;
     private Drawable element;
     private TextView actionBarText;
@@ -75,13 +76,6 @@ public class SerialLearn extends Activity {
             Log.e(getPackageName(), "ELEMENT WAS NULL!");
         }
 
-        Log.d(getPackageName(), "element: " + element.toString());
-
-
-
-
-
-
 
         final int[] imagesIDs = new int[seqElements.length];
         originalSequence = new int[seqElements.length];
@@ -93,7 +87,7 @@ public class SerialLearn extends Activity {
 
         for (int i=0; i < seqElements.length; i++){
             seqElements[i].setImageDrawable(element);
-            Log.d(getPackageName(), i+"seqElement: " + seqElements[i]);
+            Log.d(getPackageName(), i + " seqElement: " + seqElements[i]);
         }
 
 
@@ -153,44 +147,44 @@ public class SerialLearn extends Activity {
         wm.getDefaultDisplay().getMetrics(dm);
         final Random random = new Random();
 
+        final Screen screen = new Screen(getApplicationContext());
+
+        seqElements[seqElements.length - 1].post(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < seqElements.length; i++) {
+                    ImageView imageToAdd = new ImageView(getApplicationContext());
 
 
-                seqElements[seqElements.length-1].post(new Runnable() {
-                    @Override
-                    public void run() {
-                        for(int i=0; i<seqElements.length; i++){
-                            ImageView imageToAdd = new ImageView(getApplicationContext());
+                    //setting params for imageViews to top bar (dodawanie obrazów do sekwencji [u góry])
+                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(Math.round(100 * dm.density),
+                            Math.round(100 * dm.density));
+                    imageToAdd.setPadding(0, Math.round(i * SIZE_MULTIPLIER * (dm.density)), 0, 0);
+                    imageToAdd.setImageDrawable(element);
+                    params.setMargins((i * 2) * seqElements[i].getWidth(), 0, 0, 0);
+                    imageToAdd.setLayoutParams(params);
+
+                    originalSeqL.addView(imageToAdd);
 
 
-                            //setting params for imageViews to top bar (dodawanie obrazów do sekwencji [u góry])
-                            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(Math.round(100*dm.density),
-                                    Math.round(100*dm.density));
-                            imageToAdd.setPadding(0, Math.round(i*SIZE_MULTIPLIER*(dm.density)), 0, 0);
-                            imageToAdd.setImageDrawable(element);
-                            params.setMargins((i * 2) * seqElements[i].getWidth(), 0, 0, 0);
-                            imageToAdd.setLayoutParams(params);
+                    //setting created imageViews (ustawianie obrazów do ułożenia)
+                    RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(Math.round(100 * dm.density),
+                            Math.round(100 * dm.density));
 
-                            originalSeqL.addView(imageToAdd);
+                    if (seqElements[i] != null) {
+                        seqElements[i].setX(
+                                Math.min(seqElements[i].getWidth() * (random.nextFloat() + 1) * i / 2,
+                                        screen.getWidth() - seqElements[i].getWidth()));
+                        seqElements[i].setY(
+                                Math.min((random.nextFloat() * 150) + screen.getHeight() / 8,
+                                        screen.getHeight() / 2 - seqElements[i].getHeight()));
+                        seqElements[i].setImageDrawable(element);
+                        seqElements[i].setPadding(0, Math.round(i * SIZE_MULTIPLIER * (dm.density)), 0, 0);
 
-
-
-
-                            //setting created imageViews (ustawianie obrazów do ułożenia)
-                            RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(Math.round(100*dm.density),
-                                    Math.round(100*dm.density));
-
-                            if(seqElements[i] != null) {
-                                params2.setMargins(
-                                        (seqElements[i].getWidth() * (random.nextInt(5)+1)),
-                                        (seqElements[i].getHeight() * (random.nextInt(2)+1)), 0, 0);
-                                seqElements[i].setLayoutParams(params2);
-                                seqElements[i].setImageDrawable(element);
-                                seqElements[i].setPadding(0, Math.round(i*SIZE_MULTIPLIER*(dm.density)), 0, 0);
-
-                            }
-                        }
                     }
-                });
+                }
+            }
+        });
     }
 
 
@@ -408,18 +402,24 @@ public class SerialLearn extends Activity {
 
         int counter = 1;
 
+        Screen screen = new Screen(getApplicationContext());
+
         for (ImageView seqElement : seqElements) {
-            seqElement.setX((seqElement.getWidth() * (random.nextInt(2)+1)) * counter);
-            seqElement.setY((seqElement.getHeight() * (random.nextInt(2)+1)));
+            seqElement.setX(
+                    Math.min(seqElement.getWidth() * (random.nextFloat() + 1) * counter,
+                            screen.getWidth() - seqElement.getWidth()));
+            seqElement.setY(
+                    Math.min((random.nextFloat() * 150) + screen.getHeight() / 8,
+                            screen.getHeight() / 2 - seqElement.getHeight()));
 
             seqElement.setVisibility(View.VISIBLE);
             counter++;
         }
 
-        setMovementAndCollisions(image1, imagesIDs[0]);
-        setMovementAndCollisions(image2, imagesIDs[1]);
-        setMovementAndCollisions(image3, imagesIDs[2]);
-        setMovementAndCollisions(image4, imagesIDs[3]);
+        setMovementAndCollisions(image1, 0);
+        setMovementAndCollisions(image2, 1);
+        setMovementAndCollisions(image3, 2);
+        setMovementAndCollisions(image4, 3);
 
         isSent = false;
 
