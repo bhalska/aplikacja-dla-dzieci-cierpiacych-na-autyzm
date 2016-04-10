@@ -75,12 +75,12 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="5">
+            android:layout_weight="2">
 
             <ImageView
                 android:id="@+id/element"
-                android:layout_width="@dimen/animal_dimen"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
                 android:src="@drawable/pomarancza"
                 android:background="@drawable/oval_background"

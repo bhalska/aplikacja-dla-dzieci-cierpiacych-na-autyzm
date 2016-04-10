@@ -1,11 +1,15 @@
 package pl.marcinwroblewski.aplikacja_dzieci.Menus;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import pl.marcinwroblewski.aplikacja_dzieci.BetaInfoDialogFragment;
 import pl.marcinwroblewski.aplikacja_dzieci.Motility.MotilityMenu;
 import pl.marcinwroblewski.aplikacja_dzieci.R;
 import pl.marcinwroblewski.aplikacja_dzieci.Sequence.SequenceMenu;
@@ -14,7 +18,7 @@ import pl.marcinwroblewski.aplikacja_dzieci.Settings.Settings;
 import pl.marcinwroblewski.aplikacja_dzieci.Usable.Animations;
 
 
-public class GamesMenu extends Activity {
+public class GamesMenu extends FragmentActivity {
 
 
     private Animations animsControler;
@@ -36,11 +40,23 @@ public class GamesMenu extends Activity {
         }
 
 
+        //notatka o wersji testowej
+        SharedPreferences sp = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        if(!sp.getBoolean("beta_info", false)){
+            DialogFragment betaInfo = new BetaInfoDialogFragment();
+            betaInfo.show(getSupportFragmentManager(), "Beta message");
+
+            Log.d("Beta message", "delivered");
+
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putBoolean("beta_info", true);
+            editor.apply();
+        }
+
         animsControler = new Animations(getApplicationContext());
         animsControler.startAnim(Animations.FADE_LEFT, buttons);
 
-
-        getActionBar().hide();
+        if(getActionBar() != null)  getActionBar().hide();
     }
 
 

@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/corner_radius"
+    android:layout_gravity="center"
+    tools:context="pl.marcinwroblewski.aplikacja_dzieci.BetaInfoDialogFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo_small"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="Witamy w testowej wersji aplikacji Sówka"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:gravity="left"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:text="Robimy co w naszej mocy by zapobiec wszelkim problemom związanym z obsługą aplikacji, dlatego prosimy o zgłaszanie każdego napotkanego problemu. \nŻyczymy dobrej zabawy ☻"
+        android:textSize="14dp"
+        />
+
+    <Button
+        android:id="@+id/ok_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Przejdź dalej"
+        android:textStyle="bold"
+        android:background="@color/green"
+        android:textColor="#fff"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:layout_gravity="center|bottom"
+        />
+
+</LinearLayout>

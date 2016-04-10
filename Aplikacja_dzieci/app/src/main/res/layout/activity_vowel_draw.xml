@@ -84,18 +84,20 @@
             <TextView
                 android:id="@+id/vowel_to_draw"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="3"
                 android:layout_gravity="center"
 
                 android:text="{}"
-                android:textSize="@dimen/vowel_inApp"
+                android:textSize="120sp"
                 android:textColor="@color/vowelsColor"
                 android:gravity="center"/>
 
             <ImageView
                 android:id="@+id/play_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/edittext_padding"
 
@@ -127,7 +129,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="2">
 
                     <TextView
                         android:id="@+id/animacja_placeholder"
@@ -136,7 +138,7 @@
                         android:layout_gravity="center"
 
                         android:text=";"
-                        android:textSize="@dimen/vowel_inApp"
+                        android:textSize="120sp"
                         android:textColor="@color/white"
                         android:gravity="center"/>
 

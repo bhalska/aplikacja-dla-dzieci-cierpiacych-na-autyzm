@@ -83,7 +83,7 @@
             <ImageView
                 android:id="@+id/element1"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/spoon"
                 android:background="@drawable/oval_background"
@@ -95,7 +95,7 @@
             <ImageView
                 android:id="@+id/element2"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/plate"
                 android:background="@drawable/oval_background"
@@ -107,7 +107,7 @@
             <ImageView
                 android:id="@+id/element3"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/knife"
                 android:background="@drawable/oval_background"
@@ -119,7 +119,7 @@
             <ImageView
                 android:id="@+id/element4"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/fork"
                 android:background="@drawable/oval_background"

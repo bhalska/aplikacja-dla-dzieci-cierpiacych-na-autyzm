@@ -150,4 +150,6 @@
     <string name="title_activity_fruits_game">FruitsGame</string>
     <string name="title_activity_economic_animals_game">zwierzęta gospodarcze</string>
 
+    <string name="hello_blank_fragment">Beta message</string>
+
 </resources>

@@ -85,7 +85,7 @@
             <ImageView
                 android:id="@+id/animal1"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
@@ -98,7 +98,7 @@
             <ImageView
                 android:id="@+id/animal2"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
                 android:layout_toRightOf="@id/animal1"
@@ -111,7 +111,7 @@
             <ImageView
                 android:id="@+id/animal3"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
                 android:layout_toRightOf="@id/animal2"
@@ -124,7 +124,7 @@
             <ImageView
                 android:id="@+id/animal4"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
                 android:layout_toRightOf="@id/animal3"

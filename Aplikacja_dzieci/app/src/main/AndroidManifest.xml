@@ -8,9 +8,9 @@
 
     <supports-screens
         android:anyDensity="true"
-        android:largeScreens="false"
-        android:normalScreens="false"
-        android:requiresSmallestWidthDp="600"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:requiresSmallestWidthDp="360"
         android:smallScreens="false"
         android:xlargeScreens="true" />
 

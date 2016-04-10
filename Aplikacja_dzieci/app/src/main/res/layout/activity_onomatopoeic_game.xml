@@ -79,18 +79,16 @@
             android:layout_height="0dp"
             android:layout_weight="3"
             android:orientation="horizontal"
-            android:background="@color/aqua_background"
-            android:paddingTop="@dimen/app_margin">
+            android:background="@color/aqua_background">
 
             <ImageView
                 android:id="@+id/animal1"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/goat"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
 
                 android:clickable="true"
                 android:onClick="check"/>
@@ -98,12 +96,11 @@
             <ImageView
                 android:id="@+id/animal2"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/cat"
                 android:layout_toRightOf="@id/animal1"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
 
                 android:clickable="true"
                 android:onClick="check"/>
@@ -111,12 +108,11 @@
             <ImageView
                 android:id="@+id/animal3"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/sheep"
                 android:layout_toRightOf="@id/animal2"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
 
                 android:clickable="true"
                 android:onClick="check"/>
@@ -124,12 +120,11 @@
             <ImageView
                 android:id="@+id/animal4"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/animal_dimen"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/chicken"
                 android:layout_toRightOf="@id/animal3"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="@dimen/margin_animals_onomatopoeic"
 
                 android:clickable="true"
                 android:onClick="check"/>

@@ -13,7 +13,6 @@
     <dimen name="app_container_padding">50dp</dimen>
     <dimen name="photo_add_icon_padding">100dp</dimen>
     <dimen name="margin_animals_onomatopoeic">125dp</dimen>
-    <dimen name="animal_dimen">250dp</dimen>
     <dimen name="cloud_dimen">300dp</dimen>
     <dimen name="onomatopoeic_text_size">60sp</dimen>
     <dimen name="sequence_element_width">150dp</dimen>
