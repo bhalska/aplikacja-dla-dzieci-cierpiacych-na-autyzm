@@ -89,7 +89,7 @@
                 android:layout_gravity="center"
 
                 android:text="{}"
-                android:textSize="120sp"
+                android:textSize="@dimen/vowel_inApp"
                 android:textColor="@color/vowelsColor"
                 android:gravity="center"/>
 
@@ -138,7 +138,7 @@
                         android:layout_gravity="center"
 
                         android:text=";"
-                        android:textSize="120sp"
+                        android:textSize="@dimen/vowel_inApp"
                         android:textColor="@color/white"
                         android:gravity="center"/>
 

@@ -2,26 +2,28 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="action_bar_padding">10dp</dimen>
-    <dimen name="action_bar_margin">20dp</dimen>
-    <dimen name="action_bar_height">75dp</dimen>
-    <dimen name="app_margin">50dp</dimen>
-    <dimen name="edittext_padding">15dp</dimen>
-    <dimen name="default_controls_width">300dp</dimen>
-    <dimen name="default_controls_heigth">75dp</dimen>
-    <dimen name="textview_background_padding">10dp</dimen>
-    <dimen name="app_container_padding">50dp</dimen>
-    <dimen name="photo_add_icon_padding">100dp</dimen>
-    <dimen name="margin_animals_onomatopoeic">125dp</dimen>
-    <dimen name="cloud_dimen">300dp</dimen>
-    <dimen name="onomatopoeic_text_size">60sp</dimen>
-    <dimen name="sequence_element_width">150dp</dimen>
+    <dimen name="action_bar_padding">8dp</dimen>
+    <dimen name="action_bar_margin">16dp</dimen>
+    <dimen name="action_bar_height">64dp</dimen>
+    <dimen name="app_margin">36dp</dimen>
+    <dimen name="edittext_padding">12dp</dimen>
+    <dimen name="default_controls_width">220dp</dimen>
+    <dimen name="default_controls_heigth">64dp</dimen>
+    <dimen name="textview_background_padding">8dp</dimen>
+    <dimen name="app_container_padding">24dp</dimen>
+    <dimen name="photo_add_icon_padding">64dp</dimen>
+    <dimen name="margin_animals_onomatopoeic">100dp</dimen>
+    <dimen name="cloud_dimen">240dp</dimen>
+    <dimen name="onomatopoeic_text_size">48sp</dimen>
+    <dimen name="sequence_element_width">120dp</dimen>
 
-    <dimen name="defalut_text_size">25sp</dimen>
-    <dimen name="action_bar_text_size">25dp</dimen>
-    <dimen name="vowel_inApp">175dp</dimen>
-    <dimen name="default_text_size_print">200dp</dimen>
+    <dimen name="defalut_text_size">18sp</dimen>
+    <dimen name="action_bar_text_size">18dp</dimen>
+    <dimen name="vowel_inApp">150dp</dimen>
+    <dimen name="default_text_size_print">160dp</dimen>
     <dimen name="image_default_padding">15dp</dimen>
+    <dimen name="sequence_element">64dp</dimen>
+    <dimen name="sequence_hint_height">75dp</dimen>
 
 
 </resources>

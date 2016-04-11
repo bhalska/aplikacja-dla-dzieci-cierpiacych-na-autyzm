@@ -6,11 +6,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import pl.marcinwroblewski.aplikacja_dzieci.R;
-import pl.marcinwroblewski.aplikacja_dzieci.Sequence.SequenceLearn;
 import pl.marcinwroblewski.aplikacja_dzieci.Settings.Settings;
 
 
@@ -21,8 +20,7 @@ public class SequenceMenu extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sequence_menu);
 
-
-        getActionBar().hide();
+        if(getActionBar() != null) getActionBar().hide();
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
         setActionBarTextValue((TextView)findViewById(R.id.action_bar_text), "układanie szeregów");
@@ -34,11 +32,10 @@ public class SequenceMenu extends Activity {
     public void goToSequence(View view) {
         Intent intent = new Intent(getApplicationContext(), SequenceLearn.class);
 
-        RelativeLayout clickedView = (RelativeLayout)findViewById(view.getId());
+        LinearLayout clickedView = (LinearLayout)findViewById(view.getId());
 
         for(int i=0; i<clickedView.getChildCount(); i++){
             View img = clickedView.getChildAt(i);
-            //elementsToSend[i] = getResources().getIdentifier(img.toString(), "drawable", getPackageName());
 
             intent.putExtra("element" + i, getResources().getIdentifier(img.getTag().toString(), "drawable", getPackageName()));
             Log.d(getPackageName(), "img.getTag().toString() = " + img.getTag().toString());
@@ -48,7 +45,7 @@ public class SequenceMenu extends Activity {
     }
 
     public void setActionBarTextValue(TextView actionBarText, String gameName){
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("pl.marcinwroblewski.aplikacja_dzieci", getApplicationContext().MODE_PRIVATE);
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("pl.marcinwroblewski.aplikacja_dzieci", MODE_PRIVATE);
 
         if(!pref.getString("child_name", "").isEmpty() && !pref.getString("child_name", "").contains(" ")){
             actionBarText.setText(pref.getString("child_name", "") + " gra w " + gameName);

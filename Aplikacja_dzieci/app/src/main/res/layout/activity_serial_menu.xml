@@ -68,14 +68,14 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/action_bar"
-        android:padding="@dimen/app_container_padding">
+        android:layout_below="@id/action_bar">
     <RelativeLayout
         android:id="@+id/app_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/action_bar"
-        android:padding="@dimen/app_container_padding">
+        android:layout_marginLeft="@dimen/app_container_padding"
+        android:layout_marginRight="@dimen/app_container_padding">
 
 
 

@@ -92,7 +92,7 @@
 
                 <TextView
                     android:id="@+id/reader_men"
-                    android:layout_width="150dp"
+                    android:layout_width="110dp"
                     android:layout_height="@dimen/default_controls_heigth"
                     android:padding="@dimen/textview_background_padding"
                     android:layout_below="@id/reader_label"
@@ -109,7 +109,7 @@
 
                 <TextView
                     android:id="@+id/reader_women"
-                    android:layout_width="150dp"
+                    android:layout_width="110dp"
                     android:layout_height="@dimen/default_controls_heigth"
                     android:padding="@dimen/textview_background_padding"
                     android:layout_below="@id/reader_label"
@@ -145,15 +145,16 @@
             />
 
 
-            <ScrollView
+            <HorizontalScrollView
                 android:id="@+id/scroll_rewards"
-                android:layout_width="300dp"
+                android:layout_width="@dimen/default_controls_width"
                 android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
                 android:layout_below="@id/reward_label">
 
-                <RelativeLayout
+                <LinearLayout
                     android:id="@+id/rewards_container"
-                    android:layout_width="300dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <ImageView
@@ -193,8 +194,8 @@
                         android:clickable="true"
                         android:onClick="setReward"/>
 
-                </RelativeLayout>
-            </ScrollView>
+                </LinearLayout>
+            </HorizontalScrollView>
         <RelativeLayout
             android:id="@+id/child_photo_holder"
             android:layout_width="@dimen/default_controls_width"

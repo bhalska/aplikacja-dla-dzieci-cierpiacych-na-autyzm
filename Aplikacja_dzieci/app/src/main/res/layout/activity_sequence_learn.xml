@@ -91,7 +91,7 @@
         <LinearLayout
 
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/sequence_hint_height"
             android:gravity="center">
 
 
@@ -100,15 +100,15 @@
             <ImageView
                 android:id="@+id/first_seq_element"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:src="@drawable/sun_big"/>
 
             <ImageView
                 android:id="@+id/second_seq_element"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_toRightOf="@id/first_seq_element"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/car"
                 />
@@ -116,8 +116,7 @@
             <ImageView
                 android:id="@+id/third_seq_element"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_toRightOf="@id/second_seq_element"
+                android:layout_height="match_parent"
                 android:layout_weight="1" />
 
 
@@ -147,16 +146,16 @@
 
         <ImageView
             android:id="@+id/image1"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/sequence_element"
+            android:layout_height="@dimen/sequence_element"
             android:layout_centerInParent="true"
             android:background="@color/white_background"
             android:src="@drawable/car" />
 
         <ImageView
             android:id="@+id/image2"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/sequence_element"
+            android:layout_height="@dimen/sequence_element"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/image1"
             android:background="@color/white_background"
@@ -164,8 +163,8 @@
 
         <ImageView
             android:id="@+id/image3"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/sequence_element"
+            android:layout_height="@dimen/sequence_element"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/image2"
             android:background="@color/white_background"
@@ -173,8 +172,8 @@
 
         <ImageView
             android:id="@+id/image4"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/sequence_element"
+            android:layout_height="@dimen/sequence_element"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@id/image1"
             android:background="@color/white_background"
@@ -182,8 +181,8 @@
 
         <ImageView
             android:id="@+id/image5"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/sequence_element"
+            android:layout_height="@dimen/sequence_element"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@id/image4"
             android:background="@color/white_background"
@@ -191,8 +190,8 @@
 
         <ImageView
             android:id="@+id/image6"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="@dimen/sequence_element"
+            android:layout_height="@dimen/sequence_element"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/image3"
             android:background="@color/white_background"
@@ -209,7 +208,7 @@
             <ImageView
                 android:id="@+id/container1"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="@dimen/sequence_hint_height"
                 android:layout_alignParentLeft="true"
                 android:layout_weight="0.1"
                 android:background="@color/white_background"
@@ -218,7 +217,7 @@
             <ImageView
                 android:id="@+id/container2"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="@dimen/sequence_hint_height"
                 android:layout_toRightOf="@id/container1"
                 android:layout_weight="0.1"
                 android:background="@color/white"/>
@@ -226,7 +225,7 @@
             <ImageView
                 android:id="@+id/container3"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="@dimen/sequence_hint_height"
                 android:layout_toRightOf="@id/container2"
                 android:layout_weight="0.1"
                 android:background="@color/white_background"/>
@@ -234,7 +233,7 @@
             <ImageView
                 android:id="@+id/container4"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="@dimen/sequence_hint_height"
                 android:layout_toRightOf="@id/container3"
                 android:layout_weight="0.1"
                 android:background="@color/white"/>
@@ -242,7 +241,7 @@
             <ImageView
                 android:id="@+id/container5"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="@dimen/sequence_hint_height"
                 android:layout_toRightOf="@id/container4"
                 android:layout_weight="0.1"
                 android:background="@color/white_background"/>
@@ -250,7 +249,7 @@
             <ImageView
                 android:id="@+id/container6"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="@dimen/sequence_hint_height"
                 android:layout_toRightOf="@id/container5"
                 android:layout_weight="0.1"
                 android:background="@color/white"/>

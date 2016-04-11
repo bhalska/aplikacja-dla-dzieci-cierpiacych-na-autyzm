@@ -68,8 +68,7 @@
         android:id="@+id/app_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/action_bar"
-        android:padding="@dimen/app_container_padding">
+        android:layout_below="@id/action_bar">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -82,7 +81,7 @@
                 android:id="@+id/two_elements_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.5">
+                android:layout_weight="1">
 
                     <TextView
                         android:id="@+id/two_elements_label"
@@ -96,20 +95,22 @@
                         android:textColor="@color/white"
                         />
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:id="@+id/first_opt_2"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_below="@id/two_elements_label"
                         android:gravity="center"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
 
                         android:clickable="true"
                         android:onClick="goToSequence">
                         <ImageView
                             android:id="@+id/sun_img"
 
-                            android:layout_width="150dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:src="@drawable/sun"
                             android:background="@color/white_background"
                             android:tag="sun"
@@ -118,20 +119,22 @@
                         <ImageView
                             android:id="@+id/cloud_img"
 
-                            android:layout_width="150dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:src="@drawable/cloud"
                             android:background="@color/white_background"
                             android:layout_toRightOf="@id/sun_img"
                             android:tag="cloud"/>
-                    </RelativeLayout>
+                    </LinearLayout>
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:id="@+id/second_opt_2"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_below="@id/first_opt_2"
                         android:gravity="center"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
 
                         android:clickable="true"
                         android:onClick="goToSequence">
@@ -139,8 +142,9 @@
                         <ImageView
                             android:id="@+id/car_img"
 
-                            android:layout_width="150dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:src="@drawable/car"
                             android:background="@color/white_background"
                             android:tag="car"/>
@@ -148,13 +152,14 @@
                         <ImageView
                             android:id="@+id/plane_img"
 
-                            android:layout_width="150dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:src="@drawable/plane"
                             android:background="@color/white_background"
                             android:layout_toRightOf="@id/car_img"
                             android:tag="plane"/>
-                    </RelativeLayout>
+                    </LinearLayout>
 
                 </RelativeLayout>
 
@@ -162,7 +167,7 @@
                     android:id="@+id/three_elements_container"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.5">
+                    android:layout_weight="1">
 
                     <TextView
                         android:id="@+id/three_elements_label"
@@ -176,12 +181,13 @@
                         android:textColor="@color/white"
                         />
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:id="@+id/first_opt_3"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_below="@id/three_elements_label"
                         android:gravity="center"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
 
                         android:clickable="true"
                         android:onClick="goToSequence">
@@ -189,17 +195,20 @@
                         <ImageView
                             android:id="@+id/car_img2"
 
-                            android:layout_width="150dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:src="@drawable/car"
                             android:background="@color/white_background"
+
                             android:tag="car"/>
 
                         <ImageView
                             android:id="@+id/plane_img2"
 
-                            android:layout_width="150dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:src="@drawable/plane"
                             android:background="@color/white_background"
                             android:layout_toRightOf="@id/car_img2"
@@ -208,20 +217,22 @@
                         <ImageView
                             android:id="@+id/ship_img2"
 
-                            android:layout_width="150dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:src="@drawable/ship"
                             android:background="@color/white_background"
                             android:layout_toRightOf="@id/plane_img2"
                             android:tag="ship"/>
-                    </RelativeLayout>
+                    </LinearLayout>
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:id="@+id/second_opt_3"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_below="@id/first_opt_3"
                         android:gravity="center"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
 
                         android:clickable="true"
                         android:onClick="goToSequence">
@@ -229,8 +240,9 @@
                         <ImageView
                             android:id="@+id/sun_img2"
 
-                            android:layout_width="150dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:src="@drawable/sun"
                             android:background="@color/white_background"
                             android:tag="sun"/>
@@ -238,8 +250,9 @@
                         <ImageView
                             android:id="@+id/cloud_img2"
 
-                            android:layout_width="150dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:src="@drawable/cloud"
                             android:background="@color/white_background"
                             android:layout_toRightOf="@id/sun_img2"
@@ -248,13 +261,14 @@
                         <ImageView
                             android:id="@+id/goat_img2"
 
-                            android:layout_width="150dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:src="@drawable/goat"
                             android:background="@color/white_background"
                             android:layout_toRightOf="@id/cloud_img2"
                             android:tag="goat"/>
-                    </RelativeLayout>
+                    </LinearLayout>
 
 
 
