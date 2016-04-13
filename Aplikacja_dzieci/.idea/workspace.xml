@@ -147,14 +147,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33e212ab-3e44-4332-8090-4a608ae9f985" name="Default" comment="Nowe logo">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo_small.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logo_small.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../logo_small.png" afterPath="$PROJECT_DIR$/../logo_small.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_beta_info_dialog.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_beta_info_dialog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="Aplikacja_dzieci.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -2286,7 +2280,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460395813937</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Nowe logo">
+      <created>1460574502374</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1460574502374</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -2346,6 +2346,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Zwiększenie liczby obsługiwanych ekranów, dodanie informacji o wersji testowej" />
     <MESSAGE value="Poprawki layotu związane z dopasowaniem do mniejszych ekranów" />
     <MESSAGE value="Nowe logo" />
