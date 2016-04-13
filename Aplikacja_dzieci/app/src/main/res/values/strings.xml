@@ -151,5 +151,6 @@
     <string name="title_activity_economic_animals_game">zwierzęta gospodarcze</string>
 
     <string name="hello_blank_fragment">Beta message</string>
+    <string name="beta_info_title">Witamy w testowej wersji aplikacji Sówka</string>
 
 </resources>

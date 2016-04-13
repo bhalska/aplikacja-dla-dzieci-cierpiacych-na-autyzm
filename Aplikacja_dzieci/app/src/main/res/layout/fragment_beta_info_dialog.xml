@@ -16,13 +16,14 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
+            android:contentDescription="Logo aplikacji"
             android:src="@drawable/logo_small"/>
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:layout_height="wrap_content"
-            android:text="Witamy w testowej wersji aplikacji Sówka"
+            android:text="@string/beta_info_title"
             android:paddingLeft="@dimen/activity_vertical_margin"
             android:paddingRight="@dimen/activity_vertical_margin"
             android:textStyle="bold"
@@ -36,7 +37,7 @@
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_vertical_margin"
         android:paddingRight="@dimen/activity_vertical_margin"
-        android:text="Robimy co w naszej mocy by zapobiec wszelkim problemom związanym z obsługą aplikacji, dlatego prosimy o zgłaszanie każdego napotkanego problemu. \nŻyczymy dobrej zabawy ☻"
+        android:text="Robimy co w naszej mocy by zapobiec wszelkim problemom związanym z obsługą aplikacji, dlatego prosimy o zgłaszanie każdego napotkanego problemu. Życzymy dobrej zabawy ☻"
         android:textSize="14dp"
         />
 
