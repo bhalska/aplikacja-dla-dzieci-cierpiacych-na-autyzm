@@ -1,6 +1,6 @@
 
 # Aplikacja dla dzieci cierpiących na autyzm 
-![alt tag](https://raw.githubusercontent.com/bhalska/aplikacja-dla-dzieci-cierpiacych-na-autyzm/master/logo_small.png)<br />
+![alt tag](https://raw.githubusercontent.com/bhalska/aplikacja-dla-dzieci-cierpiacych-na-autyzm/master/baner.png)<br />
 Zawiera zbiór gier mających na celu nauczyć grupę docelową podstawowych umiejętności w przystępnej dla nich formie.
 
 
