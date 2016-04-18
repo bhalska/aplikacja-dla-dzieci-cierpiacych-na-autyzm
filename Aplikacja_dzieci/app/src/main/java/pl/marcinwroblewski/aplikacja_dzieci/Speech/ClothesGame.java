@@ -7,8 +7,6 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -63,7 +61,7 @@ public class ClothesGame extends Activity {
 
 
         actionBarText = (TextView)findViewById(R.id.action_bar_text);
-        setActionBarTextValue(actionBarText, "ciuchy");
+        setActionBarTextValue(actionBarText, "ubrania");
 
         onomatopoeicWord = (TextView)findViewById(R.id.onomatopoeic_word);
 

@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
@@ -43,7 +41,7 @@ public class ClothesLearn extends Activity {
         getActionBar().hide();
 
         TextView actionBarText = (TextView)findViewById(R.id.action_bar_text);
-        setActionBarTextValue(actionBarText, "ciuchy");
+        setActionBarTextValue(actionBarText, "ubrania");
 
 
         animsControler = new Animations(getApplicationContext());

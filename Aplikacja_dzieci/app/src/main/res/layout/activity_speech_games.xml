@@ -336,7 +336,7 @@
 
                     android:background="@color/white_background"
                     android:gravity="center"
-                    android:text="Ciuchy"
+                    android:text="Ubrania"
                     android:textColor="@color/blue"
                     android:textSize="@dimen/defalut_text_size"/>
 
