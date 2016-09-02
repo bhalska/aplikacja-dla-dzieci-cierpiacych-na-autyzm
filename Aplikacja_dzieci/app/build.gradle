@@ -1,26 +1,21 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
     defaultConfig {
         applicationId "pl.marcinwroblewski.aplikacja_dzieci"
         minSdkVersion 14
-        targetSdkVersion 23
-        versionCode 10
-        versionName "0.1.5 Beta"
+        targetSdkVersion 24
+        versionCode 12
+        versionName "0.1.7 Beta"
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+
     productFlavors {
     }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:support-v4:23.2.0'
+    compile 'com.android.support:support-v4:24.2.0'
 }

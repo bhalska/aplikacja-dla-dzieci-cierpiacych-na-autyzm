@@ -5,7 +5,7 @@
     <string name="action_settings">Ustawienia</string>
     <string name="title_activity_vovel_draw">Rysowanie samogłosek</string>
     <string name="title_activity_settings">Ustawienia</string>
-    <string name="reader_choose">Wybierz głos lektora</string>
+    <string name="reader_choose">Wybierz głos lektora <i>(opcja aktualnie niedostępna)</i></string>
     <string name="reader_men">męski</string>
     <string name="reader_women">damski</string>
     <string name="title_activity_vowels_learn">Nauka czytania samogłosek</string>

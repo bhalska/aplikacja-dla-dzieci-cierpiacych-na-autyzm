@@ -78,7 +78,7 @@
         <TextView
             android:id="@+id/reader_label"
             android:layout_width="@dimen/default_controls_width"
-            android:layout_height="@dimen/default_controls_heigth"
+            android:layout_height="wrap_content"
             android:padding="@dimen/textview_background_padding"
             android:layout_marginTop="@dimen/default_controls_heigth"
             android:layout_below="@id/child_name_holder"
@@ -92,11 +92,11 @@
 
                 <TextView
                     android:id="@+id/reader_men"
-                    android:layout_width="110dp"
+                    android:layout_width="150dp"
                     android:layout_height="@dimen/default_controls_heigth"
                     android:padding="@dimen/textview_background_padding"
                     android:layout_below="@id/reader_label"
-                    android:background="@color/blue_background"
+                    android:background="@color/unactive_bg"
 
                     android:text="@string/reader_men"
                     android:textColor="@color/white"
@@ -109,17 +109,17 @@
 
                 <TextView
                     android:id="@+id/reader_women"
-                    android:layout_width="110dp"
+                    android:layout_width="150dp"
                     android:layout_height="@dimen/default_controls_heigth"
                     android:padding="@dimen/textview_background_padding"
                     android:layout_below="@id/reader_label"
                     android:layout_toRightOf="@id/reader_men"
 
 
-                    android:background="@color/white_background"
+                    android:background="@color/unactive_bg"
 
                     android:text="@string/reader_women"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/defalut_text_size"
                     android:gravity="center"
 

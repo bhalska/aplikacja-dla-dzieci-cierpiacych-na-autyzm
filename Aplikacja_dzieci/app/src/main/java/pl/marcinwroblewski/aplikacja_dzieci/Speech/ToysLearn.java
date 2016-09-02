@@ -84,7 +84,7 @@ public class ToysLearn extends Activity {
                 getResources().getDrawable(R.drawable.lalka),
                 getResources().getDrawable(R.drawable.mis),
                 getResources().getDrawable(R.drawable.pilka),
-                getResources().getDrawable(R.drawable.samolot),
+                getResources().getDrawable(R.drawable.plane),
                 getResources().getDrawable(R.drawable.wozek)
         };
 

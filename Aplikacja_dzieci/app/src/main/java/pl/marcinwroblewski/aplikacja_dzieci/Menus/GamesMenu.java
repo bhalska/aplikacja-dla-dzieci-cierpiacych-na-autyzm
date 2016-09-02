@@ -40,16 +40,16 @@ public class GamesMenu extends FragmentActivity {
         }
 
 
-        //notatka o wersji testowej
+        //notka o wersji testowej
         SharedPreferences sp = getSharedPreferences(getPackageName(), MODE_PRIVATE);
-        if(!sp.getBoolean("beta_info", false)){
+        if(!sp.getBoolean("beta_info2", false)){
             DialogFragment betaInfo = new BetaInfoDialogFragment();
             betaInfo.show(getSupportFragmentManager(), "Beta message");
 
             Log.d("Beta message", "delivered");
 
             SharedPreferences.Editor editor = sp.edit();
-            editor.putBoolean("beta_info", true);
+            editor.putBoolean("beta_info2", true);
             editor.apply();
         }
 

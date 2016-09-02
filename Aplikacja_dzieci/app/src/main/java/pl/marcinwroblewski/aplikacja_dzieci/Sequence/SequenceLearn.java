@@ -49,6 +49,7 @@ public class SequenceLearn extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         setContentView(R.layout.activity_sequence_learn);
 
         getActionBar().hide();
@@ -390,36 +391,40 @@ public class SequenceLearn extends Activity {
 
     public void reset(View view) {
 
-        Random random = new Random();
+//        Random random = new Random();
+//
+//        for (ImageView container : containers) {
+//            container.setImageDrawable(null);
+//        }
+//
+//        int counter = 1;
+//        Screen screen = new Screen(getApplicationContext());
+//
+//        for (ImageView seqElement : seqElements) {
+//
+//            seqElement.setX(
+//                    Math.min(seqElement.getWidth() * (random.nextFloat() + 1) * counter / 2,
+//                            screen.getWidth()));
+//            seqElement.setY(
+//                    Math.min((random.nextFloat() * 150) + screen.getHeight() / 8,
+//                            screen.getHeight() / 2 - seqElement.getHeight()));
+//
+//            seqElement.setVisibility(View.VISIBLE);
+//            counter++;
+//        }
+//
+//        setMovementAndCollisions(image1, imagesIDs[0]);
+//        setMovementAndCollisions(image2, imagesIDs[1]);
+//        setMovementAndCollisions(image3, imagesIDs[2]);
+//        setMovementAndCollisions(image4, imagesIDs[3]);
+//        setMovementAndCollisions(image5, imagesIDs[4]);
+//        setMovementAndCollisions(image6, imagesIDs[5]);
+//
+//        isSent = false;
 
-        for (ImageView container : containers) {
-            container.setImageDrawable(null);
-        }
-
-        int counter = 1;
-        Screen screen = new Screen(getApplicationContext());
-
-        for (ImageView seqElement : seqElements) {
-
-            seqElement.setX(
-                    Math.min(seqElement.getWidth() * (random.nextFloat() + 1) * counter / 2,
-                            screen.getWidth()));
-            seqElement.setY(
-                    Math.min((random.nextFloat() * 150) + screen.getHeight() / 8,
-                            screen.getHeight() / 2 - seqElement.getHeight()));
-
-            seqElement.setVisibility(View.VISIBLE);
-            counter++;
-        }
-
-        setMovementAndCollisions(image1, imagesIDs[0]);
-        setMovementAndCollisions(image2, imagesIDs[1]);
-        setMovementAndCollisions(image3, imagesIDs[2]);
-        setMovementAndCollisions(image4, imagesIDs[3]);
-        setMovementAndCollisions(image5, imagesIDs[4]);
-        setMovementAndCollisions(image6, imagesIDs[5]);
-
-        isSent = false;
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
 

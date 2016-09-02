@@ -45,9 +45,9 @@ public class SerialLearn extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_serial_learn);
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        setContentView(R.layout.activity_serial_learn);
         getActionBar().hide();
 
         actionBarText = (TextView) findViewById(R.id.action_bar_text);
@@ -394,34 +394,37 @@ public class SerialLearn extends Activity {
 
     public void reset(View view) {
 
-        Random random = new Random();
+//        Random random = new Random();
+//
+//        for (ImageView container : containers) {
+//            container.setImageDrawable(null);
+//        }
+//
+//        int counter = 1;
+//
+//        Screen screen = new Screen(getApplicationContext());
+//
+//        for (ImageView seqElement : seqElements) {
+//            seqElement.setX(
+//                    Math.min(seqElement.getWidth() * (random.nextFloat() + 1) * counter,
+//                            screen.getWidth() - seqElement.getWidth()));
+//            seqElement.setY(
+//                    Math.min((random.nextFloat() * 150) + screen.getHeight() / 8,
+//                            screen.getHeight() / 2 - seqElement.getHeight()));
+//
+//            seqElement.setVisibility(View.VISIBLE);
+//            counter++;
+//        }
+//
+//        setMovementAndCollisions(image1, 0);
+//        setMovementAndCollisions(image2, 1);
+//        setMovementAndCollisions(image3, 2);
+//        setMovementAndCollisions(image4, 3);
+//
+//        isSent = false;
 
-        for (ImageView container : containers) {
-            container.setImageDrawable(null);
-        }
-
-        int counter = 1;
-
-        Screen screen = new Screen(getApplicationContext());
-
-        for (ImageView seqElement : seqElements) {
-            seqElement.setX(
-                    Math.min(seqElement.getWidth() * (random.nextFloat() + 1) * counter,
-                            screen.getWidth() - seqElement.getWidth()));
-            seqElement.setY(
-                    Math.min((random.nextFloat() * 150) + screen.getHeight() / 8,
-                            screen.getHeight() / 2 - seqElement.getHeight()));
-
-            seqElement.setVisibility(View.VISIBLE);
-            counter++;
-        }
-
-        setMovementAndCollisions(image1, 0);
-        setMovementAndCollisions(image2, 1);
-        setMovementAndCollisions(image3, 2);
-        setMovementAndCollisions(image4, 3);
-
-        isSent = false;
-
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }
