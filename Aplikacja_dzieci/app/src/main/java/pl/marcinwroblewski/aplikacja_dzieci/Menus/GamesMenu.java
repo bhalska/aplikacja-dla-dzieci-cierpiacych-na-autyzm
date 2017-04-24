@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import pl.marcinwroblewski.aplikacja_dzieci.BetaInfoDialogFragment;
 import pl.marcinwroblewski.aplikacja_dzieci.Motility.MotilityMenu;
 import pl.marcinwroblewski.aplikacja_dzieci.R;
@@ -24,6 +26,7 @@ public class GamesMenu extends FragmentActivity {
     private Animations animsControler;
     private View[] buttons;
 
+    private FirebaseAnalytics fa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +62,12 @@ public class GamesMenu extends FragmentActivity {
         if(getActionBar() != null)  getActionBar().hide();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        fa = FirebaseAnalytics.getInstance(getApplicationContext());
 
-
+    }
 
     public void sendTo(View view) {
 

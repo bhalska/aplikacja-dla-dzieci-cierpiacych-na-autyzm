@@ -15,6 +15,7 @@
 
 
     <include
+        android:id="@id/action_bar"
         layout="@layout/fake_action_bar"/>
 
 
